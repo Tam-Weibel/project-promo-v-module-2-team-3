@@ -1,0 +1,15 @@
+.header {
+    background-color: $white-Four;
+    display: flex;
+    justify-content: center;
+    padding: 95px 35px 35.4px 35px;
+    &__logo {
+        width: 250px;
+        height: 63px;
+        margin: 0;
+        &--img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

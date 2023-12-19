@@ -1,0 +1,13 @@
+.footer {
+    background-color: $white-Two;
+    display: flex;
+    justify-content: center;
+    padding: 18px 61px 20px 61px;
+    &__list {
+        list-style: none;
+        color: $brownish-grey;
+        font-size: $medium;
+        /*buscar la font-family y ponerla*/
+        /*añadir el gap entre los items*/
+    }
+}

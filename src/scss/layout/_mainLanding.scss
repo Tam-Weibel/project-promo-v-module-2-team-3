@@ -1,0 +1,44 @@
+.main {
+    background-color: $white-Four;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &__h1 {
+        color: $dull-orange;
+        font-size: $xtralarge;
+    }
+    &__h2 {
+        color: $dark-green-blue;
+        font-size: $small;
+    }
+    &__section {
+        border: 1.6px solid rgba(225, 115, 52, 0.21);
+        border-radius: 4px;
+        display: flex;
+        gap: 24px;
+        margin: 17.8px 26.4px 38.6px 25.6px;
+        padding: 15px 20px 10px 20px;
+        &--logo {
+            color: $dull-orange;
+        }
+        &--p {
+            color: $gun-metal;
+            font-size: $small;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        background-color: $dirty-blue;
+        color: $white-Two;
+        font-size: $large;
+        text-transform: uppercase;
+        width: 129px;
+        height: 42px;
+        border-radius: 21px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+}
