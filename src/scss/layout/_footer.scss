@@ -1,13 +1,28 @@
 .footer {
     background-color: $white-Two;
-    display: flex;
-    justify-content: center;
     padding: 18px 61px 20px 61px;
     &__list {
         list-style: none;
         color: $brownish-grey;
         font-size: $medium;
-        /*buscar la font-family y ponerla*/
-        /*añadir el gap entre los items*/
+        font-family: $text;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &--fig {
+            width: 103px;
+            height: 40px;
+            margin: 0;
+            & > img {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 }

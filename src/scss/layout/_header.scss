@@ -3,10 +3,17 @@
     display: flex;
     justify-content: center;
     padding: 95px 35px 35.4px 35px;
+    @media (min-width: 768px) {
+        padding: 350px 174px 31px 175px;
+    }
     &__logo {
         width: 250px;
         height: 63px;
         margin: 0;
+        @media (min-width: 768px) {
+            width: 419px;
+            height: 105px;
+        }
         &--img {
             width: 100%;
             height: auto;
