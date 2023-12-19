@@ -1,1 +1,31 @@
+.card{
+    height: 450px;
+    background:linear-gradient(to bottom, $silver, $pale-grey);
+}
 
+.reset{
+        display: flex;
+        align-items: center;
+        color:$gun-metal;
+        border: 2px solid $white-two;
+        border-radius: 15px;
+        width: 75px; 
+        height: 30px;
+        padding: 10px;
+        gap: 10px;
+        flex-direction: row-reverse;
+        transform: translate(45px, 38px);
+
+   &__text{
+        font-family:$font-open-sans;
+        text-transform: uppercase;
+        font-size: 1.2rem; 
+     }   
+} 
+.return{  
+    &__ico{ 
+    color: $gun-metal;
+    font-size: 1.2rem;
+    text-decoration: none;
+      }
+}
