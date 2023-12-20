@@ -29,3 +29,25 @@
     text-decoration: none;
       }
 }
+/*.description{
+    background-color: $white-two;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    height: 300px;
+    display: flex;
+    z-index: 1;
+    
+    &__img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        //max-width: 100%; 
+        //max-height: 100%; 
+        background-position: center center;
+        //z-index: 100;
+
+   }
+
+
+}*/
