@@ -1,0 +1,10 @@
+.fill__form {
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+
+    &--title {
+        font-size: 30px;
+        flex-direction: column;
+    }
+}
