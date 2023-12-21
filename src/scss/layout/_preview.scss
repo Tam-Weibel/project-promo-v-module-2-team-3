@@ -1,6 +1,7 @@
 .card{
-    height: 450px;
+    //height: 450px;
     background:linear-gradient(to bottom, $silver, $pale-grey);
+    
 }
 
 .reset{
@@ -15,6 +16,7 @@
         gap: 10px;
         flex-direction: row-reverse;
         transform: translate(45px, 38px);
+        z-index: 1;
 
    &__text{
         font-family:$font-open-sans;
@@ -29,15 +31,31 @@
     text-decoration: none;
       }
 }
-/*.description{
+.preview{
+    
     background-color: $white-two;
-    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3);
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 240px;
+    //margin: 0 auto ;
+    //padding-bottom: 30px;
+     /*flex-direction: center;
+    justify-content: center;
+    align-items: center;
     position: relative;
     height: 300px;
-    display: flex;
-    z-index: 1;
+    width: 240px;
+    transform: translate(50%, 50%);
+    top: 25%;
+    left: 25%;
+    z-index: 1;*/
+
+}
     
-    &__img{
+ /*   &__img{
+        display: flex;
         position: absolute;
         top: 50%;
         left: 50%;
