@@ -1,12 +1,16 @@
 .card{
        background:linear-gradient(to bottom, $silver, $pale-grey);
        display:flex;
-       justify-content: center;
+       //justify-content: center;
        align-items: center;
+       flex-direction: column;
+       
+       
 }
 
 .reset{
         display: flex;
+        justify-content: left;
         align-items: center;
         color:$gun-metal;
         border: 2px solid $white-two;
@@ -16,7 +20,7 @@
         padding: 10px;
         gap: 10px;
         flex-direction: row-reverse;
-        transform: translate(45px, 38px);
+        //transform: translate(45px, 38px);
         z-index: 1;
 
    &__text{
@@ -33,6 +37,48 @@
       }
 }
 .preview{
+    display:flex;
+    flex-direction: column;
+    //margin-top: 60px;
+    padding-bottom: 40px;
+     
+ &__text{
+    background-color: $white-two;
+ }
+ &__text--title{
+    color:$dark-green-blue;
+    font-family:$font-montserrat;
+    font-size:$large;
+ }
+ &__text--p{
+    color:$gun-metal;
+    font-family:$font-montserrat;
+    font-size:$medium;
+   }
+}
+.photo{
+    background-image: url('../images/preview.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+    width: 240px;
+}
+.social{
+    background-color: $white-two;
+    padding:20px;
+    &__icon{
+        color:$dark-green-blue;
+        font-size: $large;
+        text-decoration: none;
+        border: 2px solid $hospital-green;
+        border-radius: 50px;
+    }
+    
+}
+
+
+
+/*.preview{
     display:flex;
     align-items: center;
     //justify-content: center;
@@ -75,7 +121,7 @@
     left: 25%;
     z-index: 1;*/
 
-}
+
     
  /*   &__img{
         display: flex;
