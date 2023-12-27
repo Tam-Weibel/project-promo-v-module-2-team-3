@@ -1,140 +1,77 @@
 .card{
        background:linear-gradient(to bottom, $silver, $pale-grey);
        display:flex;
-       //justify-content: center;
        align-items: center;
        flex-direction: column;
-       
-       
 }
 
 .reset{
-        display: flex;
-        justify-content: left;
-        align-items: center;
         color:$gun-metal;
-        border: 2px solid $white-two;
+        border: 1.5px solid $white-two;
         border-radius: 15px;
         width: 75px; 
         height: 30px;
-        padding: 10px;
-        gap: 10px;
-        flex-direction: row-reverse;
-        //transform: translate(45px, 38px);
-        z-index: 1;
-
-   &__text{
+        font-size: $small;
+        background-color: transparent;
+        align-self: flex-start;
         font-family:$text;
         text-transform: uppercase;
-        font-size: 1.2rem; 
-     }   
-} 
-.return{  
-    &__ico{ 
-    color: $gun-metal;
-    font-size: 1.2rem;
-    text-decoration: none;
-      }
+        background-position: center center;
+        margin-left: 12%; 
+        margin-top: 15%;
 }
+
 .preview{
     display:flex;
     flex-direction: column;
-    //margin-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 12%;
+    padding-top:8%;
      
  &__text{
     background-color: $white-two;
+    padding-left: 15px;
+    }
+ &__border{
+    border-left: solid 5px $dirty-blue;
+     
  }
  &__text--title{
     color:$dark-green-blue;
     font-family:$font-montserrat;
     font-size:$large;
+    padding-top: 15px;
+    padding-bottom: 5px;
  }
  &__text--p{
     color:$gun-metal;
     font-family:$font-montserrat;
     font-size:$medium;
+    padding-bottom: 8px;
    }
+  
+  
 }
 .photo{
     background-image: url('../images/preview.jpg');
     background-size: cover;
     background-position: center center;
-    height: 300px;
+    height: 200px;
     width: 240px;
 }
 .social{
     background-color: $white-two;
-    padding:20px;
+    padding:10px;
     &__icon{
         color:$dark-green-blue;
         font-size: $large;
         text-decoration: none;
         border: 2px solid $hospital-green;
-        border-radius: 50px;
-    }
-    
-}
-
-
-
-/*.preview{
-    display:flex;
-    align-items: center;
-    //justify-content: center;
-    background-color: $white-two;
-    transform: translate(50%, 50%);
-    //background-position: center center;
-    flex-direction: column;
-    //background-size: cover;
-    //background-position: center;
-    //height: 300px;
-    //width: 240px;
-
-    &__photo{
-        height: 200px;
-        width: 240px;
-        background-image: url('../images/preview.jpg');
-        //background-size:cover;
-        //position: absolute;
-        //background-position: center center;
-        z-index: 1;
-    }
-    
-   /*
-    background-color: $white-two;
-    background-position: center center;
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    width: 240px;
-    //margin: 0 auto ;
-    //padding-bottom: 30px;
-     /*flex-direction: center;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 300px;
-    width: 240px;
-    transform: translate(50%, 50%);
-    top: 25%;
-    left: 25%;
-    z-index: 1;*/
-
-
-    
- /*   &__img{
-        display: flex;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        //max-width: 100%; 
-        //max-height: 100%; 
-        background-position: center center;
-        //z-index: 100;
-
-   }
-
-
-}*/
+        border-radius: 50%;
+        line-height: 32px;
+        width: 32px;
+        height: 32px;
+        margin-left: 5px;
+        text-align: center center;
+        padding: 5px;
+            }
+        }
