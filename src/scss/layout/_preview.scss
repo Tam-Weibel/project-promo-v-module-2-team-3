@@ -3,6 +3,13 @@
        display:flex;
        align-items: center;
        flex-direction: column;
+       @media (min-width: 768px) {
+         align-items: center;
+         width: 40%;
+         border-radius: 8px;
+      }
+      @media (min-width: 1200px) {
+         width: 55%; }
 }
 
 .reset{
@@ -17,8 +24,14 @@
         font-family:$text;
         text-transform: uppercase;
         background-position: center center;
+//verificar si lo puedo hacer de otra forma para no generar tanta diferencia en los distintos dispositivos, ademas no puedo separar el icono del parrafo.
+//probar mañana con crear un div separando el i y crear un p para el reset y a ese div darle la clase para aplicarle un transform:translate y un gap para separarlos
         margin-left: 12%; 
         margin-top: 15%;
+        @media (min-width: 1200px) {
+         margin-left: 35%;
+        }
+       
 }
 
 .preview{
@@ -32,6 +45,7 @@
     padding-left: 15px;
     }
  &__border{
+   //verificar como hacer el borde mas pequeño(altura)
     border-left: solid 5px $dirty-blue;
      
  }
