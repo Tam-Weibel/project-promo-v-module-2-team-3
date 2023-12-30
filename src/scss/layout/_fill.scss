@@ -1,0 +1,159 @@
+.fieldset {
+    border-color: transparent;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+
+    @media (min-width: 768px) {
+        margin-left: 30px;
+    }
+
+   
+
+    &__title {
+            display: flex;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            color: $gun-metal;
+            margin-left: 51px;
+            margin-bottom: 25px;
+            margin-left: 0;
+            gap: 15px;     
+    }
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title {
+        color: $dark-green-blue;
+        line-height: 20px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: $medium;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+    }
+
+    &__input {
+        border: 1px solid $hospital-green;
+        width: 281px;
+        height: 30px;
+
+        @media (mix-width: 768px) {
+            width: 329px;
+        }
+
+        &::placeholder {
+            color: #c5c5c5;
+            font-size: $medium;
+            transform: translateX(9px);
+            
+        }
+
+    }
+
+    &__photo {
+        display: flex;
+        margin-top: 18px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &--label {
+            width: 100%;
+            font-family: 'Open Sans', sans-serif;
+            font-size: $medium;
+            color: $dark-green-blue;
+            
+        }
+
+        &--button {
+            width: 140px;
+            height: 30px;
+            background-color: $dull-orange;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: white;
+            font-family: 'Open Sans', sans-serif; 
+            font-size: medium;
+            text-align: center;
+            line-height: 30px;
+            font-weight: 100;
+        }
+        &--input {
+            display: none;
+        }
+
+        &--thumb {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-left: 20px;
+            border: solid 1px $hospital-green;
+            background-size: contain;
+            background-position: center center;
+        }
+        
+    }
+    
+}
+
+/* .form__image {
+
+    &--title {
+        color: $dark-green-blue;
+        line-height: 20px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: $medium;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    } */
+
+/* .button {
+        display: flex;
+        background-color: $dull-orange;
+        width: 140px;
+        height: 30px;
+        color: white;
+        text-align: center;
+        margin-top: 7px;
+        
+
+        &__text {
+            color: white;
+            margin: auto;
+            text-decoration: none;
+            font-size: $medium;
+            font-family: 'Open Sans', sans-serif; 
+        }
+
+
+       
+} */
+
+/* .square {
+
+        width: 30px;
+        height: 30px;
+        border: 1px solid $hospital-green;
+        transform: translateY(-30px);
+        margin-left: 180px;
+       
+} */
+
+
+.icon {
+   display: flex;
+   margin-left: 130px;
+   font-size: 1.8rem;
+}
+
+
