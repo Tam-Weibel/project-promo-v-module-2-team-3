@@ -92,68 +92,26 @@
 
         &--thumb {
             display: inline-block;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             margin-left: 20px;
             border: solid 1px $hospital-green;
             background-size: contain;
             background-position: center center;
+            margin-top: 10px;
         }
         
     }
     
 }
 
-/* .form__image {
 
-    &--title {
-        color: $dark-green-blue;
-        line-height: 20px;
-        font-family: 'Open Sans', sans-serif;
-        font-size: $medium;
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-    }
-    } */
-
-/* .button {
-        display: flex;
-        background-color: $dull-orange;
-        width: 140px;
-        height: 30px;
-        color: white;
-        text-align: center;
-        margin-top: 7px;
-        
-
-        &__text {
-            color: white;
-            margin: auto;
-            text-decoration: none;
-            font-size: $medium;
-            font-family: 'Open Sans', sans-serif; 
-        }
-
-
-       
-} */
-
-/* .square {
-
-        width: 30px;
-        height: 30px;
-        border: 1px solid $hospital-green;
-        transform: translateY(-30px);
-        margin-left: 180px;
-       
-} */
 
 
 .icon {
    display: flex;
    margin-left: 130px;
    font-size: 1.8rem;
-}
+};
 
 
