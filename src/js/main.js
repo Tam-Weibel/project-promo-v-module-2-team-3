@@ -1,4 +1,3 @@
-'use strict';
-
-console.log('>> Ready :)');
-import './preview.js'
+'use strict'
+import '/preview.js';
+import '/form.js';

@@ -3,12 +3,13 @@
 @import 'layout/header';
 @import 'layout/preview';
 @import 'layout/mainLanding';
+@import 'layout/form_designs';
+@import 'layout/fill';
+@import 'layout/share';
 @import 'layout/footer';
+@import 'pages/last';
 
-@media (min-width: 768px) {
-    .mainLast {
-    display:flex;
-    flex-direction: row-reverse;
-    padding: 25px;
-    }
-    }
+
+
+
+
