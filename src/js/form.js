@@ -3,7 +3,7 @@
 const section = document.querySelector('.js-section');
 const arrow = document.querySelector('.icon');
 
-function handleClick () {
+function handleClick() {
     arrow.classList.toggle('fa-angle-up');
     arrow.classList.toggle('fa-angle-down');
 }
