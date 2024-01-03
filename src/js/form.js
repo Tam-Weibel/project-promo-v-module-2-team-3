@@ -1,7 +1,7 @@
 'use strict';
 
 const section = document.querySelector('.js-section');
-const arrow = document.querySelector('.icon');
+const arrow = document.querySelectorAll('.icon');
 
 function handleClick() {
     arrow.classList.toggle('fa-angle-up');
