@@ -1,93 +1,86 @@
-.card{
-       background:linear-gradient(to bottom, $silver, $pale-grey);
-       display:flex;
-       align-items: center;
-       flex-direction: column;
-       @media (min-width: 768px) {
-         align-items: center;
-         width: 40%;
-         border-radius: 8px;
-      }
-      @media (min-width: 1200px) {
-         width: 55%; }
+.card {
+  background: linear-gradient(to bottom, $silver, $pale-grey);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    align-items: center;
+    width: 40%;
+    border-radius: 8px;
+  }
+  @media (min-width: 1200px) {
+    width: 55%;
+  }
 }
 
-.reset{
-        color:$gun-metal;
-        border: 1.5px solid $white-two;
-        border-radius: 15px;
-        width: 75px; 
-        height: 30px;
-        font-size: $small;
-        background-color: transparent;
-        align-self: flex-start;
-        font-family:$text;
-        text-transform: uppercase;
-        background-position: center center;
-//verificar si lo puedo hacer de otra forma para no generar tanta diferencia en los distintos dispositivos, ademas no puedo separar el icono del parrafo.
-//probar mañana con crear un div separando el i y crear un p para el reset y a ese div darle la clase para aplicarle un transform:translate y un gap para separarlos
+.reset {
+  color: $gun-metal;
+  border: 1.5px solid $white-two;
+  border-radius: 15px;
+  width: 75px;
+  height: 30px;
+  font-size: $small;
+  background-color: transparent;
+  align-self: flex-start;
+  font-family: $text;
+  text-transform: uppercase;
+  background-position: center center;
+  //verificar si lo puedo hacer de otra forma para no generar tanta diferencia en los distintos dispositivos, ademas no puedo separar el icono del parrafo.
+  //probar mañana con crear un div separando el i y crear un p para el reset y a ese div darle la clase para aplicarle un transform:translate y un gap para separarlos
 
-        margin-left: 12%; 
-        margin-top: 15%;
-        @media (min-width: 1200px) {
-         margin-left: 35%;
-        }
-       
+  margin-left: 12%;
+  margin-top: 15%;
+  @media (min-width: 1200px) {
+    margin-left: 35%;
+  }
 }
 
-.preview{
-    display:flex;
-    flex-direction: column;
-    padding-bottom: 12px;
-    padding-top:8px;
-   margin: 10px 0 10px 0;
+.preview {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12%;
+  padding-top: 8%;
 
-
-     
- &__text{
+  &__box {
     background-color: $white-two;
-   //  padding-left: 15px;
-    padding: 21px 14px 10px 20px; 
+  }
+
+  &__text {
+    margin: 20px 0 10px 0;
+    font-family: $font-montserrat;
     border-left: solid 5px $dirty-blue;
-   }
-//  &__border{
-// //   verificar como hacer el borde mas pequeño(altura)}
- &__text--title{
-    color:$dark-green-blue;
-    font-family:$font-montserrat;
-    font-size:$large;
-   //  padding-top: 15px;
-   //  padding-bottom: 5px;
-   }
- &__text--p{
-    color:$gun-metal;
-    font-family:$font-montserrat;
-    font-size:$medium;
-   //  padding-bottom: 8px;
-   }
-
+    padding-left: 15px;
+  }
+  &__text--title {
+    color: $dark-green-blue;
+    font-size: $large;
+  }
+  &__text--p {
+    color: $gun-metal;
+    font-size: $medium;
+  }
 }
-.photo{
-    background-image: url('../images/preview.jpg');
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    width: 240px;
+.photo {
+  background-image: url("../images/preview.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+  width: 240px;
 }
-.social{
-    background-color: $white-two;
-    padding:10px;
-    &__icon{
-        color:$dark-green-blue;
-        font-size: $large;
-        text-decoration: none;
-        border: 2px solid $hospital-green;
-        border-radius: 50%;
-        line-height: 32px;
-        width: 32px;
-        height: 32px;
-        margin-left: 5px;
-        text-align: center center;
-        padding: 5px;
-      }
-   }
+.social {
+  background-color: $white-two;
+  padding: 10px;
+  &__icon {
+    color: $dark-green-blue;
+    font-size: $large;
+    text-decoration: none;
+    border: 2px solid $hospital-green;
+    border-radius: 50%;
+    line-height: 32px;
+    width: 32px;
+    height: 32px;
+    margin-left: 5px;
+    text-align: center center;
+    padding: 5px;
+  }
+}
