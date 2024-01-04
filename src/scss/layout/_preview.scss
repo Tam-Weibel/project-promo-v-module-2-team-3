@@ -44,10 +44,13 @@
  &__text{
     background-color: $white-two;
     padding-left: 15px;
+    
     }
  &__border{
    //verificar como hacer el borde mas pequeño(altura)
     border-left: solid 5px $dirty-blue;
+    
+    
      
  }
  &__text--title{
@@ -56,6 +59,7 @@
     font-size:$large;
     padding-top: 15px;
     padding-bottom: 5px;
+    
  }
  &__text--p{
     color:$gun-metal;
