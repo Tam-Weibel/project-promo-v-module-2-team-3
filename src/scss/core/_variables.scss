@@ -41,3 +41,36 @@ $xtraxtralarge: 2.4rem;
 // font-families
 $title: Merriweather;
 $text: Open Sans;
+
+
+//paletas de color:
+
+.palete-1 {
+    .preview__text--title {
+        color: $dark-green-blue ;
+    }
+
+    .preview__text {
+        color: $dirty-blue ;
+    }
+
+    .social__icon.border {
+        color: $dark-green-blue;
+        border-color: $hospital-green ;
+    }
+}
+
+.palete-2 {
+    .preview__text--title {
+        color: $dried-blood ;
+    }
+
+    .preview__text {
+        color: $rusty-red ;
+    }
+
+    .social__icon.border {
+        color: $dried-blood;
+        border-color: $tomato ;
+    }
+}
