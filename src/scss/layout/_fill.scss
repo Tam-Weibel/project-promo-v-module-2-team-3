@@ -82,19 +82,19 @@
       display: none;
     }
 
-    &--thumb {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      margin-left: 20px;
-      border: solid 1px $hospital-green;
-      background-size: contain;
-      background-position: center center;
-      margin-top: 10px;
-    }
   }
 }
 
+.miniphoto {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  border: solid 1px $hospital-green;
+  background-size: contain;
+  background-position: center center;
+  margin-top: 10px;
+}
 .icon {
   display: flex;
   margin-left: 130px;

@@ -44,7 +44,7 @@ const formData = {
 const handleForm = (event) => {
     const inputId = event.target.id;
     formData[inputId] = event.target.value;
-    console.log(inputId, event.target.value);
+    
 
     if(inputId === "name") {
         previewName.innerHTML = inputName.value;
@@ -54,16 +54,16 @@ const handleForm = (event) => {
         previewJob.innerHTML = inputJob.value;
     }
 
-    else if (inputId === "photo") {
+    /* else if (inputId === "photo") {
         previewPhoto.innerHTML = inputPhoto.value;
-    }
+    } */
 
     else if (inputId === "email") {
         previewEmail.href = inputEmail.value; // meter enlace en el icono
     }
 
     else if (inputId === "phone") {
-        previewPhone.innerHTML = inputPhoto.value; //revisar para meter la foto
+        previewPhone.href = inputPhone.value; //revisar para meter la foto
     }
 
     else if (inputId === "linkedin") {
