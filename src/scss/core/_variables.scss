@@ -41,6 +41,9 @@ $xtraxtralarge: 2.4rem;
 // font-families
 $title: Merriweather;
 $text: Open Sans;
+$font-montserrat: 'Montserrat', sans-serif;
+
+
 //paletas de color:
 
 .palete-1 {
@@ -49,10 +52,10 @@ $text: Open Sans;
     }
 
     .preview__text {
-        color: $dirty-blue ;
+        border-left: solid 5px $dirty-blue ;
     }
 
-    .social__icon.border {
+    .social__icon {
         color: $dark-green-blue;
         border-color: $hospital-green ;
     }
@@ -64,13 +67,56 @@ $text: Open Sans;
     }
 
     .preview__text {
-        color: $rusty-red ;
+        border-left: solid 5px $rusty-red ;
     }
 
-    .social__icon.border {
+    .social__icon {
         color: $dried-blood;
         border-color: $tomato ;
     }
 }
 
-$font-montserrat: 'Montserrat', sans-serif;
+.palete-3 {
+    .preview__text--title {
+        color: $slate ;
+    }
+
+    .preview__text {
+        border-left: solid 5px $faded-orange ;
+    }
+
+    .social__icon {
+        color: $slate;
+        border-color: $light-grey-blue ;
+    }
+}
+
+.palete-4 {
+    .preview__text--title {
+        color: $dark-pink ;
+    }
+
+    .preview__text {
+        border-left: solid 5px $purple ;
+    }
+
+    .social__icon {
+        color: $dark-pink;
+        border-color: $light-mauve ;
+    }
+}
+
+.palete-5 {
+    .preview__text--title {
+        color: $dark-grey ;
+    }
+
+    .preview__text {
+        border-left: solid 5px $grey ;
+    }
+
+    .social__icon {
+        color: $dark-grey;
+        border-color: $light-grey ;
+    }
+}
