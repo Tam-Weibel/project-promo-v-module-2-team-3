@@ -19,7 +19,7 @@ function handleResetFormOutside (){
    previewLinkedin.href = "";
    previewGithub.href = "";
    profileImage.style.backgroundImage = "../images/preview.jpg"; // arreglar la ruta de la imagen
-  profilePreview.style.backgroundImage = "";
+   profilePreview.style.backgroundImage = "";
 
 
   };
