@@ -1,3 +1,5 @@
+'use strict'
+
 const btnResetFormOutside = document.querySelector ('.js-btnReset');
 
 //Guardo el estdo inical para que no se me borre todo de la tarjeta
