@@ -1,28 +1,87 @@
-.share{
-  border-color: transparent;
-  margin: 20px 20px 30px 20px;
-  font-family: $text, sans-serif;
+.share {
+  border: none;
+  border-bottom: 1px solid $white-three;
+  margin-bottom: 30px;
+  font-family: $text;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1.8rem;
-  &__legend{
+
+  &__legend {
     color: $gun-metal;
-    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
-    gap: 15px;
-    }
-  &__create{
+    width: 100%;
+    padding: 10px 0;
+
+    &--text {
       display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      background-color: $dull-orange;
-      width: 200px;
-      height: 50px;
-      color: $white-two;
-      border-radius: 10px;
-      border: none;
-      margin: 30px;
+      align-items: baseline;
+      gap: 15px;
     }
   }
+
+  &__create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: $dull-orange;
+    box-shadow: 0 1px 6px 0 $light-grey;
+    width: 200px;
+    height: 50px;
+    color: $white-two;
+    border-radius: 10px;
+    border: none;
+    margin: 30px auto;
+ 
+    @media (min-width:768px) {
+      box-shadow: none;
+    }
+  }
+  &__grey {
+    background-color: $white;
+  }
+  
+
+  .created{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: none;
+    border-top: 1px solid $white-three;
+    &__text{
+      color: $gun-metal;
+      padding-top: 20px;
+    }
+    &__link{
+      color: $dull-orange;
+      padding-top:5px;
+      padding-bottom: 10px;
+      font-size: 12px;
+      text-decoration: none;
+      text-align: center;
+    }
+    &__btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: $azure;
+      box-shadow: 0 1px 4px 0 $light-grey;
+      width: 180px;
+      height: 30px;
+      font-size: 14px;
+      color: $white-two;
+      border-radius: 3px;
+      border: none;
+      margin-bottom: 30px;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+}
