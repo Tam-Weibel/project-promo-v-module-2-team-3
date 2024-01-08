@@ -1,136 +1,126 @@
 .form_designs {
-
-
     display: flex;
     flex-direction: row;
-    border: 0;
-
-    @media (min-width:768px) {
-        width: 50%;
-    }
-
+    border: none;
+    border-bottom: 1px solid $white-three;
+    // margin-top: 10px;
+    // margin-left: 20px;
+    // margin-right: 20px;
+  
     &-leyend {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 100%;
+      padding: 10px 0;
+  
+      &-div {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 20px;
-
-        .icon {
-            font-size: 1.7rem;
+        align-items: baseline;
+        gap: 15px;
+        color: $gun-metal;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-family: $text;
+        font-weight: 600;
+  
+        .main__section--logo {
+          font-size: 1.7rem;
         }
-
-        &-div {
-            display: flex;
-            gap: 10px;
-
-            h2 {
-                font-size: 1.8rem;
-                text-transform: uppercase;
-                font-family: $text;
-            }
-
-            .main__section--logo {
-                font-size: 1.6rem;
-            }
-        }
+      }
     }
-
+  
     &-div {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-        padding: 30px 20px 10px 40px;
-
-        h3 {
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            font-family: $text;
-        }
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      padding: 30px 20px 10px 40px;
+  
+      h3 {
+        color: $gun-metal;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-family: $text;
+      }
     }
-}
-
-
-
-.form_designs_colors-div {
-
+  }
+  
+  .form_designs_colors-div {
     display: flex;
     flex-direction: row;
     gap: 10px;
     padding-bottom: 20px;
-
+  
     &-label {
-        display: flex;
-        flex-direction: row;
-
-        &-span {
-            width: 30px;
-            height: 25px;
-            background-color: palevioletred;
-            display: inline;
-        }
+      display: flex;
+      flex-direction: row;
+  
+      &-span {
+        width: 30px;
+        height: 25px;
+        background-color: palevioletred;
+        display: inline;
+      }
     }
-}
-
-.dark-green-blue {
+  }
+  
+  .dark-green-blue {
     background-color: $dark-green-blue;
-}
-
-.dirty-blue {
+  }
+  
+  .dirty-blue {
     background-color: $dirty-blue;
-}
-
-.hospital-green {
+  }
+  
+  .hospital-green {
     background-color: $hospital-green;
-}
-
-.dried-blood {
+  }
+  
+  .dried-blood {
     background-color: $dried-blood;
-}
-
-.rusty-red {
+  }
+  
+  .rusty-red {
     background-color: $rusty-red;
-}
-
-.tomato {
+  }
+  
+  .tomato {
     background-color: $tomato;
-}
-
-.slate {
+  }
+  
+  .slate {
     background-color: $slate;
-}
-
-.faded-orange {
+  }
+  
+  .faded-orange {
     background-color: $faded-orange;
-}
-
-.light-grey-blue {
+  }
+  
+  .light-grey-blue {
     background-color: $light-grey-blue;
-}
-
-.dark-pink {
+  }
+  
+  .dark-pink {
     background-color: $dark-pink;
-}
-
-.purple {
+  }
+  
+  .purple {
     background-color: $purple;
-}
-
-.light-mauve {
+  }
+  
+  .light-mauve {
     background-color: $light-mauve;
-}
-
-.dark-grey {
+  }
+  
+  .dark-grey {
     background-color: $dark-grey;
-}
-
-.grey {
+  }
+  
+  .grey {
     background-color: $grey;
-}
-
-.light-grey {
+  }
+  
+  .light-grey {
     background-color: $light-grey;
-}
-.hidden {
-    display: none;
-}
+  }

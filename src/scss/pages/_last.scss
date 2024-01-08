@@ -1,7 +1,10 @@
+.mainLast{
+    background-image: linear-gradient($white-four, $white-two);
+}
 @media (min-width: 768px) {
     .mainLast {
     display:flex;
     flex-direction: row-reverse;
-    // padding: 25px;
+    padding: 40px;
     }
-    }
+}

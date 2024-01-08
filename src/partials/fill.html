@@ -1,51 +1,53 @@
 <fieldset class="fieldset">
-  <div>
-<legend class="fieldset__title js-section"> <i class="fa-regular fa-keyboard" style="color: #e17634;"></i> Rellena <i class="fa-solid fa-angle-down icon" style="color: #54585a;"></i></legend>
+  <legend class="fieldset__title js-section"> 
+    <div class="fieldset__title--text">
+      <i class="fa-regular fa-keyboard" style="color: #e17634;"></i> 
+      Rellena 
+    </div>
+    <i class="fa-solid fa-angle-down icon"></i>
+  </legend>
+
+  <div class="form">
+
+    <div class="form__title js-name">
+      <label for="name">Nombre completo</label>
+      <input type="text" id="name" name="name" placeholder="Ej: Sally Jill" class="form__input" />
+    </div>
+
+    <div class="form__title js-job">
+      <label for="job">Puesto</label>
+      <input type="text" id="job" name="job" placeholder="Ej: Front-end unicorn" class="form__input" />
+    </div>
+
+
+    <li class="form__photo">
+      <label class="form__photo--label" for="photo">Imagen de perfil</label>
+      <label for="photo" class="form__photo--button">Añadir imagen</label>
+      <input class="form__photo--input" type="file" name="photo" id="photo">
+      <span class="miniphoto"> </span>
+    </li>
+
+    <div class="form__title">
+      <label for="name">Email</label>
+      <input type="email" id="email" name="email" placeholder="Ej: sally-hill@gmail.com" class="form__input" />
+    </div>
+
+    <div class="form__title">
+      <label for="name">Teléfono</label>
+      <input type="number" id="phone" name="phone" placeholder="Ej: 555-55-55-55" class="form__input" />
+    </div>
+
+    <div class="form__title">
+      <label for="name">Linkedin</label>
+      <input type="text" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" class="form__input" />
+    </div>
+
+    <div class="form__title">
+      <label for="name">Github</label>
+      <input type="text" id="github" name="github" placeholder="Ej: @sally-hill" class="form__input" />
+    </div>
+
   </div>
-
-<div class="form">
-
-<div class="form__title js-name">
-  <label for="name">Nombre completo</label>
-  <input type="text" id="name" name="name" placeholder="Ej: Sally Jill" class="form__input" />
-</div>
-
-<div class="form__title js-job">
-  <label for="job">Puesto</label>
-  <input type="text" id="job" name="job" placeholder="Ej: Front-end unicorn" class="form__input" />
-</div>
-
-
-<li class="form__photo">
-  <label class="form__photo--label" for="photo">Imagen de perfil</label>
-  <label for="photo" class="form__photo--button">Añadir imagen</label>
-  <input class="form__photo--input" type="file" name="photo" id="photo">
-  <span class="miniphoto"> </span>
-</li>
-
-  <div class="form__title">
-    <label for="name">Email</label>
-    <input type="email" id="email" name="email" placeholder="Ej: sally-hill@gmail.com" class="form__input" />
-  </div>
-
-  <div class="form__title">
-    <label for="name">Teléfono</label>
-    <input type="number" id="phone" name="phone" placeholder="Ej: 555-55-55-55" class="form__input" />
-  </div>
-
-  <div class="form__title">
-    <label for="name">Linkedin</label>
-    <input type="text" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" class="form__input" />
-  </div>
-
-  <div class="form__title">
-    <label for="name">Github</label>
-    <input type="text" id="github" name="github" placeholder="Ej: @sally-hill" class="form__input" />
-  </div>
-
-</div>
-</div>
 </fieldset>
-
 
 

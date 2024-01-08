@@ -44,7 +44,6 @@
     background-color: $white;
   }
   
-
   .created{
     display: flex;
     flex-direction: column;
@@ -78,10 +77,5 @@
       border: none;
       margin-bottom: 30px;
     }
-  }
-
-  .hidden {
-    display: none;
-  }
-  
+  } 
 }
