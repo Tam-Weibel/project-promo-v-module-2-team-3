@@ -3,7 +3,7 @@
 const btnResetFormOutside = document.querySelector ('.js-btnReset');
 
 //Guardo el estdo inical para que no se me borre todo de la tarjeta
-const initialInsideCard = document.querySelector ('.btnClean').innerHTML;
+//const initialInsideCard = document.querySelector ('.btnClean').innerHTML;
 
 
 function handleResetFormOutside (){
@@ -20,7 +20,7 @@ function handleResetFormOutside (){
    previewEmail.href = "";
    previewLinkedin.href = "";
    previewGithub.href = "";
-   profileImage.style.backgroundImage = "../images/preview.jpg"; // arreglar la ruta de la imagen
+   profileImage.style.backgroundImage = ""; 
    profilePreview.style.backgroundImage = "";
 
 

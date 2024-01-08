@@ -13,7 +13,7 @@ const inputEmail = document.getElementById('email');
 const inputPhone = document.getElementById('phone');
 const inputLinkedin = document.getElementById('linkedin');
 const inputGithub = document.getElementById('github');
-const previewPhoto = document.querySelector('.preview__text--p'); // hay que ver cómo se hace en el html
+const previewPhoto = document.querySelector('.js-photo'); // hay que ver cómo se hace en el html
 const previewName = document.querySelector('.preview__text--title');
 const previewJob = document.querySelector('.preview__text--p');
 const previewEmail = document.querySelector('.social__email');
@@ -21,7 +21,7 @@ const previewLinkedin = document.querySelector('.social__linkedin');
 const previewGithub = document.querySelector('.social__github');
 const previewPhone = document.querySelector('.social__phone');
 
-
+//funcion para girar el icono del acordion
 function handleClick() {
     arrow.classList.toggle('fa-angle-up');
     arrow.classList.toggle('fa-angle-down');
@@ -40,7 +40,7 @@ const formData = {
     github: '',
     photo: '',   
 };
-
+//funcion para rellenar la card con los datos del formulario
 const handleForm = (event) => {
     const inputId = event.target.id;
     formData[inputId] = event.target.value;
@@ -54,9 +54,9 @@ const handleForm = (event) => {
         previewJob.innerHTML = inputJob.value;
     }
 
-    /* else if (inputId === "photo") {
+    else if (inputId === "photo") {
         previewPhoto.innerHTML = inputPhoto.value;
-    } */
+    }
 
     else if (inputId === "email") {
         previewEmail.href = inputEmail.value; // meter enlace en el icono
