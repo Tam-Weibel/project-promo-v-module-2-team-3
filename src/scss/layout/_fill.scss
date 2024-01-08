@@ -1,23 +1,28 @@
 .fieldset {
-  border-color: transparent;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-
-  @media (min-width: 768px) {
-    margin-left: 30px;
-  }
+  border: none;
+  border-bottom: 1px solid $white-three;
+  font-family: $text;
+  // margin-top: 10px;
+  // margin-left: 20px;
+  // margin-right: 20px;
 
   &__title {
-    display: flex;
-    font-size: 1.8rem;
-    text-transform: uppercase;
+    width: 100%;
     font-family: $text;
     color: $gun-metal;
-    margin-left: 51px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     margin-bottom: 25px;
-    margin-left: 0;
-    gap: 15px;
+    padding: 10px 0;
+    &--text {
+      display: flex;
+      align-items: baseline;
+      gap: 15px;
+    }
   }
 }
 
@@ -25,11 +30,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-bottom: 30px;
+  width: 100%;
 
   &__title {
     color: $dark-green-blue;
     line-height: 20px;
-    font-family: $text;
     font-size: $medium;
     display: flex;
     flex-direction: column;
@@ -38,15 +44,10 @@
 
   &__input {
     border: 1px solid $hospital-green;
-    width: 281px;
     height: 30px;
 
-    @media (mix-width: 768px) {
-      width: 329px;
-    }
-
     &::placeholder {
-      color: #c5c5c5;
+      color: $pinkish-grey;
       font-size: $medium;
       transform: translateX(9px);
     }
@@ -60,7 +61,6 @@
 
     &--label {
       width: 100%;
-      font-family: "Open Sans", sans-serif;
       font-size: $medium;
       color: $dark-green-blue;
     }
@@ -71,8 +71,7 @@
       background-color: $dull-orange;
       margin-top: 10px;
       margin-bottom: 10px;
-      color: white;
-      font-family: "Open Sans", sans-serif;
+      color: $white-two;
       font-size: medium;
       text-align: center;
       line-height: 30px;
@@ -81,23 +80,16 @@
     &--input {
       display: none;
     }
-
-    &--thumb {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      margin-left: 20px;
-      border: solid 1px $hospital-green;
-      background-size: contain;
-      background-position: center center;
-      margin-top: 10px;
-    }
   }
 }
 
-.icon {
-  display: flex;
-  margin-left: 130px;
-  font-size: 1.8rem;
-  
+.miniphoto {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  border: solid 1px $hospital-green;
+  background-size: contain;
+  background-position: center center;
+  margin-top: 10px;
 }
