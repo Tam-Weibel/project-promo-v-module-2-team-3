@@ -2,17 +2,21 @@
   background: linear-gradient(to bottom, $silver, $pale-grey);
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  padding: 20px 0;
   @media (min-width: 768px) {
-    align-items: center;
-    width: 40%;
+    width: 50%;
     border-radius: 8px;
   }
-  @media (min-width: 1200px) {
-    width: 55%;
+  @media (min-width: 1024px) {
+    width: 60%;
   }
 }
-
+.resetBox{
+  padding-bottom: 20px;
+  width: 240px;
+}
 .reset {
   color: $gun-metal;
   border: 1.5px solid $white-two;
@@ -21,29 +25,17 @@
   height: 30px;
   font-size: $small;
   background-color: transparent;
-  align-self: flex-start;
   font-family: $text;
   text-transform: uppercase;
-  background-position: center center;
-  //verificar si lo puedo hacer de otra forma para no generar tanta diferencia en los distintos dispositivos, ademas no puedo separar el icono del parrafo.
-  //probar mañana con crear un div separando el i y crear un p para el reset y a ese div darle la clase para aplicarle un transform:translate y un gap para separarlos
-
-  margin-left: 12%;
-  margin-top: 15%;
-  @media (min-width: 1200px) {
-    margin-left: 35%;
-  }
+  align-content: center;
 }
 
 .preview {
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 12%;
-  padding-top: 8%;
-
-  &__box {
-    background-color: $white-two;
-  }
+  background-color: $white-two;
+  box-shadow: 0 1px 3px 0 $grey;
 
   &__text {
     margin: 20px 0 10px 0;
@@ -60,7 +52,7 @@
     font-size: $medium;
   }
 }
-.photo {
+.previewPhoto {
   background-image: url("../images/preview.jpg");
   background-size: cover;
   background-position: center center;
@@ -68,19 +60,21 @@
   width: 240px;
 }
 .social {
-  background-color: $white-two;
-  padding: 10px;
+  padding: 12px 20px;
+  display:flex;
+  flex-direction: row;
+  gap: 10px;
+
   &__icon {
-    color: $dark-green-blue;
-    font-size: $large;
-    text-decoration: none;
-    border: 2px solid $hospital-green;
-    border-radius: 50%;
-    line-height: 32px;
     width: 32px;
     height: 32px;
-    margin-left: 5px;
-    text-align: center center;
+    color: $dark-green-blue;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 100%;
+    border: 2px solid $hospital-green;
+    border-radius: 50%;
+    text-align: center;
     padding: 5px;
   }
 }

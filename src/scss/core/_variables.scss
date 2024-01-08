@@ -1,6 +1,6 @@
 // colors
 $dull-orange: #e17334;
-$white: #dde9ed;
+$white: #d5d5d5;
 $white-two: #ffffff;
 $white-three: #d8d8d8;
 $white-four: #f5f5f5;
@@ -12,6 +12,7 @@ $hospital-green: #a2deaf;
 $silver: #bfcdd0;
 $pale-grey: #dde9ed;
 $azure: #00a0f5;
+$pinkish-grey: #c5c5c5;
 
 // colors form_designs part
 $dark-green-blue: #114E4E;
@@ -41,82 +42,4 @@ $xtraxtralarge: 2.4rem;
 // font-families
 $title: Merriweather;
 $text: Open Sans;
-$font-montserrat: 'Montserrat', sans-serif;
-
-
-//paletas de color:
-
-.palete-1 {
-    .preview__text--title {
-        color: $dark-green-blue ;
-    }
-
-    .preview__text {
-        border-left: solid 5px $dirty-blue ;
-    }
-
-    .social__icon {
-        color: $dark-green-blue;
-        border-color: $hospital-green ;
-    }
-}
-
-.palete-2 {
-    .preview__text--title {
-        color: $dried-blood ;
-    }
-
-    .preview__text {
-        border-left: solid 5px $rusty-red ;
-    }
-
-    .social__icon {
-        color: $dried-blood;
-        border-color: $tomato ;
-    }
-}
-
-.palete-3 {
-    .preview__text--title {
-        color: $slate ;
-    }
-
-    .preview__text {
-        border-left: solid 5px $faded-orange ;
-    }
-
-    .social__icon {
-        color: $slate;
-        border-color: $light-grey-blue ;
-    }
-}
-
-.palete-4 {
-    .preview__text--title {
-        color: $dark-pink ;
-    }
-
-    .preview__text {
-        border-left: solid 5px $purple ;
-    }
-
-    .social__icon {
-        color: $dark-pink;
-        border-color: $light-mauve ;
-    }
-}
-
-.palete-5 {
-    .preview__text--title {
-        color: $dark-grey ;
-    }
-
-    .preview__text {
-        border-left: solid 5px $grey ;
-    }
-
-    .social__icon {
-        color: $dark-grey;
-        border-color: $light-grey ;
-    }
-}
+$font-montserrat: Montserrat, sans-serif;

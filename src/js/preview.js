@@ -1,3 +1,5 @@
+'use strict';
+
 const btnResetFormOutside = document.querySelector ('.js-btnReset');
 
 //Guardo el estdo inical para que no se me borre todo de la tarjeta
@@ -19,7 +21,7 @@ function handleResetFormOutside (){
    previewLinkedin.href = "";
    previewGithub.href = "";
    profileImage.style.backgroundImage = "../images/preview.jpg"; // arreglar la ruta de la imagen
-  profilePreview.style.backgroundImage = "";
+   profilePreview.style.backgroundImage = "";
 
 
   };
