@@ -12,7 +12,7 @@
     display: flex;
     font-size: 1.8rem;
     text-transform: uppercase;
-    font-family: "Open Sans", sans-serif;
+    font-family: $text;
     color: $gun-metal;
     margin-left: 51px;
     margin-bottom: 25px;
@@ -29,7 +29,7 @@
   &__title {
     color: $dark-green-blue;
     line-height: 20px;
-    font-family: "Open Sans", sans-serif;
+    font-family: $text;
     font-size: $medium;
     display: flex;
     flex-direction: column;
@@ -99,4 +99,5 @@
   display: flex;
   margin-left: 130px;
   font-size: 1.8rem;
+  
 }
