@@ -20,8 +20,6 @@ const previewEmail = document.querySelector('.social__email');
 const previewLinkedin = document.querySelector('.social__linkedin');
 const previewGithub = document.querySelector('.social__github');
 const previewPhone = document.querySelector('.social__phone');
-const shareBtn = document.querySelector('.js-click');
-const createCard = document.querySelector('.js-create-card');
 
 //funcion para girar el icono del acordion
 function handleClick() {
