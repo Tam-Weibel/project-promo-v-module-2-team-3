@@ -20,10 +20,13 @@ function handleResetFormOutside (){
    previewEmail.href = "";
    previewLinkedin.href = "";
    previewGithub.href = "";
-   profileImage.style.backgroundImage = "../images/preview.jpg"; // arreglar la ruta de la imagen
+   profileImage.style.backgroundImage = ""; 
    profilePreview.style.backgroundImage = "";
-
-
+   shareBtn.classList.add('hidden');
+   createBtn.classList.remove('share__grey');
+   articlePalettes.classList.remove('palete-1', 'palete-2', 'palete-3', 'palete-4', 'palete-5')
+   articlePalettes.classList.add('palete-1');
   };
 
   btnResetFormOutside.addEventListener('click', handleResetFormOutside);
+

@@ -13,13 +13,15 @@ const inputEmail = document.getElementById('email');
 const inputPhone = document.getElementById('phone');
 const inputLinkedin = document.getElementById('linkedin');
 const inputGithub = document.getElementById('github');
-const previewPhoto = document.querySelector('.preview__text--p'); // hay que ver cómo se hace en el html
+const previewPhoto = document.querySelector('.js-photo'); // hay que ver cómo se hace en el html
 const previewName = document.querySelector('.preview__text--title');
 const previewJob = document.querySelector('.preview__text--p');
 const previewEmail = document.querySelector('.social__email');
 const previewLinkedin = document.querySelector('.social__linkedin');
 const previewGithub = document.querySelector('.social__github');
 const previewPhone = document.querySelector('.social__phone');
+const shareBtn = document.querySelector('.js-click');
+const createCard = document.querySelector('.js-create-card');
 
 
 function handleClick() {
