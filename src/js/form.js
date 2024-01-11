@@ -1,10 +1,5 @@
 'use strict';
 
-/* const { preview } = require("vite"); */
-
-const section = document.querySelector('.js-section');
-const arrow = document.querySelector('.icon');
-const designSection = document.querySelector('.form_designs-div');
 const form = document.querySelector('.js-form');
 const inputName = document.getElementById('name');
 const inputJob = document.getElementById('job');
@@ -23,14 +18,57 @@ const previewPhone = document.querySelector('.social__phone');
 const shareBtn = document.querySelector('.js-click');
 const createCard = document.querySelector('.js-create-card');
 
+const section = document.querySelectorAll('.js-section');
+const containDesign = document.querySelector('.form_designs-div');
+const containFill = document.querySelector('.form');
+const containShare = document.querySelector('.share__create');
+const arrow = document.querySelectorAll('.icon');
 
-function handleClick() {
-    arrow.classList.toggle('fa-angle-up');
-    arrow.classList.toggle('fa-angle-down');
-    designSection.classList.toggle('hidden');
-};
 
-section.addEventListener('click', handleClick);
+function applyHidden (event) {
+    const clickedSection = event.target;
+    console.log(clickedSection);
+    if(clickedSection.classList.contains('form_designs-leyend')){
+        containDesign.classList.toggle('hidden');
+        containFill.classList.add('hidden');
+        containShare.classList.add('hidden');
+    }else if (clickedSection.classList.contains('fieldset__title')) {
+        containFill.classList.toggle('hidden');
+        containDesign.classList.add('hidden');
+        containShare.classList.add('hidden');
+    } else {
+        containShare.classList.toggle('hidden');
+        containDesign.classList.add('hidden');
+        containFill.classList.add('hidden');
+    }
+}
+
+function changeArrow () {
+    for (let i = 0; i < arrow.length; i++) {
+        if(arrow[i].classList.contains('form_designs-leyend')){
+            arrow[i].classList.toggle('fa-angle-up');
+            arrow[i].classList.toggle('fa-angle-down');
+        } else if (arrow[i].classList.contains('fieldset__title')) {
+            arrow[i].classList.toggle('fa-angle-up');
+            arrow[i].classList.toggle('fa-angle-down');
+        } else {
+            arrow[i].classList.toggle('fa-angle-up');
+            arrow[i].classList.toggle('fa-angle-down');
+        }
+    }
+}
+
+
+function handleClick(event) {
+    event.preventDefault();
+    applyHidden(event);
+    changeArrow();
+}
+
+for (const eachSection of section) {
+    eachSection.addEventListener('click', handleClick);
+}
+
 
 const formData = {
     palette: 1,
@@ -55,11 +93,6 @@ const handleForm = (event) => {
     else if (inputId === "job") {
         previewJob.innerHTML = inputJob.value;
     }
-
-    /* else if (inputId === "photo") {
-        previewPhoto.innerHTML = inputPhoto.value;
-    } */
-
     else if (inputId === "email") {
         previewEmail.href = inputEmail.value; // meter enlace en el icono
     }
