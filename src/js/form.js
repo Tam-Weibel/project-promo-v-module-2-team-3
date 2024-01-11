@@ -21,7 +21,7 @@ const createCard = document.querySelector('.js-create-card');
 const section = document.querySelectorAll('.js-section');
 const containDesign = document.querySelector('.form_designs-div');
 const containFill = document.querySelector('.form');
-const containShare = document.querySelector('.share__create');
+const containShare = document.querySelector('.js-share');
 const arrow = document.querySelectorAll('.icon');
 
 
