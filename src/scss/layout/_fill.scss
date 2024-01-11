@@ -1,0 +1,96 @@
+.fieldset {
+  border: none;
+  border-bottom: 1px solid $white-three;
+  font-family: $text;
+  // margin-top: 10px;
+  // margin-left: 20px;
+  // margin-right: 20px;
+
+  &__title {
+    width: 100%;
+    font-family: $text;
+    color: $gun-metal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 25px;
+    padding: 10px 0;
+    &--text {
+      display: flex;
+      align-items: baseline;
+      gap: 15px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+  width: 100%;
+
+  &__title {
+    color: $dark-green-blue;
+    line-height: 20px;
+    font-size: $medium;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  &__input {
+    border: 1px solid $hospital-green;
+    height: 30px;
+
+    &::placeholder {
+      color: $pinkish-grey;
+      font-size: $medium;
+      transform: translateX(9px);
+    }
+  }
+
+  &__photo {
+    display: flex;
+    margin-top: 18px;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &--label {
+      width: 100%;
+      font-size: $medium;
+      color: $dark-green-blue;
+    }
+
+    &--button {
+      width: 140px;
+      height: 30px;
+      background-color: $dull-orange;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: $white-two;
+      font-size: medium;
+      text-align: center;
+      line-height: 30px;
+      font-weight: 100;
+      border-radius: 3px;
+    }
+    &--input {
+      display: none;
+    }
+  }
+}
+
+.miniphoto {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  border: solid 1px $hospital-green;
+  background-size: contain;
+  background-position: center center;
+  margin-top: 10px;
+}
