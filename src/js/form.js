@@ -48,12 +48,15 @@ function changeArrow () {
         if(arrow[i].classList.contains('form_designs-leyend')){
             arrow[i].classList.toggle('fa-angle-up');
             arrow[i].classList.toggle('fa-angle-down');
+            
         } else if (arrow[i].classList.contains('fieldset__title')) {
             arrow[i].classList.toggle('fa-angle-up');
             arrow[i].classList.toggle('fa-angle-down');
+            
         } else {
             arrow[i].classList.toggle('fa-angle-up');
             arrow[i].classList.toggle('fa-angle-down');
+            
         }
     }
 }
