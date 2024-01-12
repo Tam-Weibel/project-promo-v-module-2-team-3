@@ -1,16 +1,10 @@
 .header {
     background-color: $white-four;
     display: flex;
+    flex-direction: flex-end;
     justify-content: center;
-    padding: 95px 35px 35.4px 35px;
-    height: 30vh;
-
-    @media (min-width: 768px) {
-        padding: 0;
-        height: 40vh;
-        display: flex;
-        align-items: flex-end;
-    }
+    align-items: end;
+    height: 40vh;
 
     &__logo {
         width: 250px;
@@ -20,8 +14,6 @@
         @media (min-width: 768px) {
             width: 419px;
             height: 105px;
-            display: flex;
-            align-items: flex-end;
         }
 
         &--img {
