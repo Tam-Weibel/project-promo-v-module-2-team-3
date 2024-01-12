@@ -26,7 +26,7 @@ const containShare = document.querySelector('.share__create');
 const arrow = document.querySelectorAll('.icon');
 
 const section = document.querySelectorAll('.js-section');
-const sectionParents = document.querySelectorAll('.form_box');
+const sectionParents = document.querySelectorAll('.form__box');
 
 const handleCollapsable =(event) => {
     const clickedHeader=event.currentTarget;
