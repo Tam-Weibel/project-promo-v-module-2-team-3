@@ -18,14 +18,33 @@ const previewPhone = document.querySelector('.social__phone');
 const shareBtn = document.querySelector('.js-click');
 const createCard = document.querySelector('.js-create-card');
 
-const section = document.querySelectorAll('.js-section');
+
+
 const containDesign = document.querySelector('.form_designs-div');
 const containFill = document.querySelector('.form');
 const containShare = document.querySelector('.share__create');
 const arrow = document.querySelectorAll('.icon');
 
+const section = document.querySelectorAll('.js-section');
+const sectionParents = document.querySelectorAll('.form_box');
 
-function applyHidden (event) {
+const handleCollapsable =(event) => {
+    const clickedHeader=event.currentTarget;
+    const clickedParent= clickedHeader.parentNode;
+    for (const collapsable of sectionParents){
+        if (collapsable===clickedParent) {
+            collapsable.classList.remove('collapsable--close');
+        }else {
+            collapsable.classList.add('collapsable--close');
+        }
+    }
+};
+for (const header of section) {
+    header.addEventListener('click',handleCollapsable);
+}
+
+
+/*function applyHidden (event) {
     const clickedSection = event.target;
     console.log(clickedSection);
     if(clickedSection.classList.contains('form_designs-leyend')){
@@ -70,7 +89,7 @@ function handleClick(event) {
 
 for (const eachSection of section) {
     eachSection.addEventListener('click', handleClick);
-}
+}*/
 
 
 const formData = {
@@ -83,7 +102,7 @@ const formData = {
     github: '',
     photo: '',   
 };
-
+//funcion para rellenar la card con los datos del formulario
 const handleForm = (event) => {
     const inputId = event.target.id;
     formData[inputId] = event.target.value;
@@ -118,8 +137,3 @@ const handleForm = (event) => {
 };
 
 form.addEventListener('input', handleForm);
-
-
-
-
-
