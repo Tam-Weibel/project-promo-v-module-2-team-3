@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const btnResetFormOutside = document.querySelector(".js-btnReset");
+const btnResetFormOutside = document.querySelector('.js-btnReset');
 
 //Guardo el estdo inical para que no se me borre todo de la tarjeta
 // const initialInsideCard = document.querySelector ('.btnClean').innerHTML;
@@ -35,4 +35,4 @@ function handleResetFormOutside() {
   sectionParents[2].classList.add("collapsable--close");
 }
 
-btnResetFormOutside.addEventListener("click", handleResetFormOutside);
+btnResetFormOutside.addEventListener('click', handleResetFormOutside);
