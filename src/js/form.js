@@ -115,13 +115,12 @@ const handleForm = (event) => {
     previewEmail.href = 'mailto:' + inputEmail.value; // meter enlace en el icono
     console.log(previewEmail.href);
   } else if (inputId === "phone") {
-    previewPhone.href = 'tel:+34' + inputPhone.value;
+    previewPhone.href = 'tel:' + inputPhone.value;
     console.log(previewPhone.href);
   } else if (inputId === "linkedin") {
-    previewLinkedin.href = 'https://www.' + inputLinkedin.value;
+    previewLinkedin.href = inputLinkedin.value;
   } else if (inputId === "github") {
-    previewGithub.href = 'https://github.com/' + inputGithub.value; //revisar el enlace a github con el usuario
-    console.log(previewGithub.href);
+    previewGithub.href = inputGithub.value; //revisar el enlace a github con el usuario
   }
 };
 
