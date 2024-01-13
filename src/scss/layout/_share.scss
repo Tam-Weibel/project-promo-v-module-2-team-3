@@ -35,35 +35,43 @@
     border-radius: 10px;
     border: none;
     margin: 30px auto;
- 
-    @media (min-width:768px) {
+    font-size: 1.8rem;
+    font-family: $text;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
       box-shadow: none;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
     }
   }
   &__grey {
     background-color: $white;
   }
-  
 
-  .created{
+  .created {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-transform: none;
     border-top: 1px solid $white-three;
-    &__text{
+    &__text {
       color: $gun-metal;
       padding-top: 20px;
     }
-    &__link{
+    &__link {
       color: $dull-orange;
-      padding-top:5px;
+      padding-top: 5px;
       padding-bottom: 10px;
       font-size: 12px;
       text-decoration: none;
       text-align: center;
     }
-    &__btn{
+    &__btn {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -79,9 +87,7 @@
       margin-bottom: 30px;
     }
   }
-
   .hidden {
     display: none;
   }
-  
 }

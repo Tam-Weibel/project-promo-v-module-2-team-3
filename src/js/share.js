@@ -1,10 +1,10 @@
-'use strict'
+'use strict';
 
 const createBtn = document.querySelector('.js-create');
 const created = document.querySelector('.js-click');
 
-function handleCreate() {
-    console.log('click');
+function handleCreate(event) {
+    event.preventDefault();
     createBtn.classList.add('share__grey');
     created.classList.remove('hidden');
 };

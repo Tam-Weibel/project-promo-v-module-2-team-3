@@ -1,136 +1,207 @@
 .form_designs {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-bottom: 1px solid $white-three;
+  // margin-top: 10px;
+  // margin-left: 20px;
+  // margin-right: 20px;
 
-
+  &-leyend {
     display: flex;
-    flex-direction: row;
-    border: 0;
-
-    @media (min-width:768px) {
-        width: 50%;
-    }
-
-    &-leyend {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 20px;
-
-        .icon {
-            font-size: 1.7rem;
-        }
-
-        &-div {
-            display: flex;
-            gap: 10px;
-
-            h2 {
-                font-size: 1.8rem;
-                text-transform: uppercase;
-                font-family: $text;
-            }
-
-            .main__section--logo {
-                font-size: 1.6rem;
-            }
-        }
-    }
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    padding: 10px 0;
 
     &-div {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-        padding: 30px 20px 10px 40px;
+      display: flex;
+      align-items: baseline;
+      gap: 15px;
+      color: $gun-metal;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      font-family: $text;
+      font-weight: 600;
 
-        h3 {
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            font-family: $text;
-        }
+      .main__section--logo {
+        font-size: 1.7rem;
+      }
     }
-}
+  }
 
-
-
-.form_designs_colors-div {
-
+  &-div {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    padding-bottom: 20px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px 20px 10px 40px;
 
-    &-label {
-        display: flex;
-        flex-direction: row;
-
-        &-span {
-            width: 30px;
-            height: 25px;
-            background-color: palevioletred;
-            display: inline;
-        }
+    h3 {
+      color: $gun-metal;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-family: $text;
     }
+  }
+}
+
+.form_designs_colors-div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-bottom: 20px;
+
+  &-label {
+    display: flex;
+    flex-direction: row;
+
+    &-span {
+      width: 30px;
+      height: 25px;
+      background-color: palevioletred;
+      display: inline;
+    }
+  }
 }
 
 .dark-green-blue {
-    background-color: $dark-green-blue;
+  background-color: $dark-green-blue;
 }
 
 .dirty-blue {
-    background-color: $dirty-blue;
+  background-color: $dirty-blue;
 }
 
 .hospital-green {
-    background-color: $hospital-green;
+  background-color: $hospital-green;
 }
 
 .dried-blood {
-    background-color: $dried-blood;
+  background-color: $dried-blood;
 }
 
 .rusty-red {
-    background-color: $rusty-red;
+  background-color: $rusty-red;
 }
 
 .tomato {
-    background-color: $tomato;
+  background-color: $tomato;
 }
 
 .slate {
-    background-color: $slate;
+  background-color: $slate;
 }
 
 .faded-orange {
-    background-color: $faded-orange;
+  background-color: $faded-orange;
 }
 
 .light-grey-blue {
-    background-color: $light-grey-blue;
+  background-color: $light-grey-blue;
 }
 
 .dark-pink {
-    background-color: $dark-pink;
+  background-color: $dark-pink;
 }
 
 .purple {
-    background-color: $purple;
+  background-color: $purple;
 }
 
 .light-mauve {
-    background-color: $light-mauve;
+  background-color: $light-mauve;
 }
 
 .dark-grey {
-    background-color: $dark-grey;
+  background-color: $dark-grey;
 }
 
 .grey {
-    background-color: $grey;
+  background-color: $grey;
 }
 
 .light-grey {
-    background-color: $light-grey;
+  background-color: $light-grey;
 }
+
 .hidden {
-    display: none;
+  display: none;
+}
+
+//paletas de color:
+
+.palete-1 {
+  .preview__text--title {
+    color: $dark-green-blue ;
+  }
+
+  .preview__text {
+    border-left: solid 5px $dirty-blue ;
+  }
+
+  .social__icon {
+    color: $dark-green-blue;
+    border-color: $hospital-green ;
+  }
+}
+
+.palete-2 {
+  .preview__text--title {
+    color: $dried-blood ;
+  }
+
+  .preview__text {
+    border-left: solid 5px $rusty-red ;
+  }
+
+  .social__icon {
+    color: $dried-blood;
+    border-color: $tomato ;
+  }
+}
+
+.palete-3 {
+  .preview__text--title {
+    color: $slate ;
+  }
+
+  .preview__text {
+    border-left: solid 5px $faded-orange ;
+  }
+
+  .social__icon {
+    color: $slate;
+    border-color: $light-grey-blue ;
+  }
+}
+
+.palete-4 {
+  .preview__text--title {
+    color: $dark-pink ;
+  }
+
+  .preview__text {
+    border-left: solid 5px $purple ;
+  }
+
+  .social__icon {
+    color: $dark-pink;
+    border-color: $light-mauve ;
+  }
+}
+
+.palete-5 {
+  .preview__text--title {
+    color: $dark-grey ;
+  }
+
+  .preview__text {
+    border-left: solid 5px $grey ;
+  }
+
+  .social__icon {
+    color: $dark-grey;
+    border-color: $light-grey ;
+  }
 }
