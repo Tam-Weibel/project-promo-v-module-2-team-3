@@ -3,7 +3,7 @@
 const btnResetFormOutside = document.querySelector ('.js-btnReset');
 
 //Guardo el estdo inical para que no se me borre todo de la tarjeta
-const initialInsideCard = document.querySelector ('.btnClean').innerHTML;
+//const initialInsideCard = document.querySelector ('.btnClean').innerHTML;
 
 
 function handleResetFormOutside (){
@@ -22,11 +22,8 @@ function handleResetFormOutside (){
    previewGithub.href = "";
    profileImage.style.backgroundImage = ""; 
    profilePreview.style.backgroundImage = "";
-   shareBtn.classList.add('hidden');
-   createBtn.classList.remove('share__grey');
-   articlePalettes.classList.remove('palete-1', 'palete-2', 'palete-3', 'palete-4', 'palete-5')
-   articlePalettes.classList.add('palete-1');
+
+
   };
 
   btnResetFormOutside.addEventListener('click', handleResetFormOutside);
-
