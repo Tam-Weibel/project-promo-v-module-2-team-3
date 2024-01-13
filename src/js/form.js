@@ -29,10 +29,9 @@ const sectionParents = document.querySelectorAll(".form_box");
 const handleCollapsable = (event) => {
   const clickedHeader = event.currentTarget;
   const clickedParent = clickedHeader.parentNode;
-  console.log("Section clicked!")
   for (const collapsable of sectionParents) {
     if (collapsable === clickedParent) {
-      collapsable.classList.toggle("collapsable--close");
+      collapsable.classList.remove("collapsable--close");
     } else {
       collapsable.classList.add("collapsable--close");
     }
@@ -113,13 +112,16 @@ const handleForm = (event) => {
   } else if (inputId === "job") {
     previewJob.innerHTML = inputJob.value;
   } else if (inputId === "email") {
-    previewEmail.href = inputEmail.value; // meter enlace en el icono
+    previewEmail.href = 'mailto:' + inputEmail.value; // meter enlace en el icono
+    console.log(previewEmail.href);
   } else if (inputId === "phone") {
-    previewPhone.href = inputPhone.value; //revisar para meter la foto
+    previewPhone.href = 'tel:+34' + inputPhone.value;
+    console.log(previewPhone.href);
   } else if (inputId === "linkedin") {
-    previewLinkedin.href = inputLinkedin.value;
+    previewLinkedin.href = 'https://www.' + inputLinkedin.value;
   } else if (inputId === "github") {
-    previewGithub.href = inputGithub.value; //revisar el enlace a github con el usuario
+    previewGithub.href = 'https://github.com/' + inputGithub.value; //revisar el enlace a github con el usuario
+    console.log(previewGithub.href);
   }
 };
 
