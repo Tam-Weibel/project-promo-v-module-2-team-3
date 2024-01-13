@@ -3,7 +3,7 @@
 const btnResetFormOutside = document.querySelector ('.js-btnReset');
 
 //Guardo el estdo inical para que no se me borre todo de la tarjeta
-//const initialInsideCard = document.querySelector ('.btnClean').innerHTML;
+// const initialInsideCard = document.querySelector ('.btnClean').innerHTML;
 
 
 function handleResetFormOutside (){
