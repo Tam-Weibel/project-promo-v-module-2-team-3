@@ -26,14 +26,6 @@ const arrow = document.querySelectorAll(".icon");
 const section = document.querySelectorAll(".js-section");
 const sectionParents = document.querySelectorAll(".form_box");
 
-const containDesign = document.querySelector('.form_designs-div');
-const containFill = document.querySelector('.form');
-const containShare = document.querySelector('.share__create');
-const arrow = document.querySelectorAll('.icon');
-
-const section = document.querySelectorAll('.js-section');
-const sectionParents = document.querySelectorAll('.form_box');
-
 const handleCollapsable =(event) => {
     const clickedHeader=event.currentTarget;
     const clickedParent= clickedHeader.parentNode;
@@ -45,7 +37,7 @@ const handleCollapsable =(event) => {
         }
     }
   }
-};
+
 
 // Open the first section by default
 sectionParents[0].classList.remove("collapsable--close");
