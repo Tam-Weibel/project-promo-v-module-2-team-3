@@ -6,7 +6,7 @@ const tweet = document.querySelector('.created__btn');
 
 console.log (tweet.href);
 
-tweet.href = tweet.href + 'testing'; 
+tweet.href = tweet.href + 'Mira mis nuevas tarjetas: url de nuestra card'; 
 console.log (tweet.href);
 function handleCreate(event) {
     event.preventDefault();
