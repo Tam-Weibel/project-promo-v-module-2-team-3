@@ -35,4 +35,24 @@ function handleResetFormOutside() {
   sectionParents[2].classList.add("collapsable--close");
 }
 
-btnResetFormOutside.addEventListener("click", handleResetFormOutside);
+function handleResetFormOutside (){
+   
+   inputName.value = "";
+   inputJob.value = "";
+   inputPhoto.value= "";
+   inputEmail.value= "";
+   inputPhone.value= "";
+   inputLinkedin.value= "";
+   inputGithub.value = "";
+   previewName.innerHTML = "Nombre Apellido";
+   previewJob.innerHTML = "Front-end developer";
+   previewEmail.href = "";
+   previewLinkedin.href = "";
+   previewGithub.href = "";
+   profileImage.style.backgroundImage = ""; 
+   profilePreview.style.backgroundImage = "";
+
+
+  };
+
+  btnResetFormOutside.addEventListener('click', handleResetFormOutside);

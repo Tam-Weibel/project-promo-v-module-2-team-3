@@ -26,14 +26,23 @@ const arrow = document.querySelectorAll(".icon");
 const section = document.querySelectorAll(".js-section");
 const sectionParents = document.querySelectorAll(".form_box");
 
-const handleCollapsable = (event) => {
-  const clickedHeader = event.currentTarget;
-  const clickedParent = clickedHeader.parentNode;
-  for (const collapsable of sectionParents) {
-    if (collapsable === clickedParent) {
-      collapsable.classList.remove("collapsable--close");
-    } else {
-      collapsable.classList.add("collapsable--close");
+const containDesign = document.querySelector('.form_designs-div');
+const containFill = document.querySelector('.form');
+const containShare = document.querySelector('.share__create');
+const arrow = document.querySelectorAll('.icon');
+
+const section = document.querySelectorAll('.js-section');
+const sectionParents = document.querySelectorAll('.form_box');
+
+const handleCollapsable =(event) => {
+    const clickedHeader=event.currentTarget;
+    const clickedParent= clickedHeader.parentNode;
+    for (const collapsable of sectionParents){
+        if (collapsable===clickedParent) {
+            collapsable.classList.remove('collapsable--close');
+        }else {
+            collapsable.classList.add('collapsable--close');
+        }
     }
   }
 };
