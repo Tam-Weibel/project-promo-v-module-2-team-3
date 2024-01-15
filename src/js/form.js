@@ -74,8 +74,12 @@ const handleForm = (event) => {
   } else if (inputId === "linkedin") {
     previewLinkedin.href = inputLinkedin.value;
   } else if (inputId === "github") {
-    previewGithub.href = inputGithub.value; //revisar el enlace a github con el usuario
+    const githubValue = inputGithub.value;
+    const githubUser = githubValue.slice(1);
+    previewGithub.href = "https://github.com/" + githubUser;
   }
+    // previewGithub.href = inputGithub.value; //revisar el enlace a github con el usuario
+  
 };
 
 form.addEventListener("input", handleForm);
