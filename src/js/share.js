@@ -8,10 +8,8 @@ console.log(tweet.href);
 
 tweet.href = tweet.href + "Mira mi nueva tarjeta: URL de la card";
 console.log(tweet.href);
-function handleCreate(event) {
-  event.preventDefault();
+function openCreate() {
   createBtn.classList.add("share__grey");
   created.classList.remove("hidden");
 }
 
-createBtn.addEventListener("click", handleCreate);

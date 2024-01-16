@@ -15,4 +15,7 @@ function handlePalette(event) {
     "palete-5"
   );
   articlePalettes.classList.add("palete-" + targetValue);
-}
+  // console.log(targetValue);
+  // formData.palette = parseInt(targetValue);
+} 
+ 

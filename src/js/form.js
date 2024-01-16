@@ -1,6 +1,7 @@
 "use strict";
 
 const form = document.querySelector(".js-form");
+const inputPalette = document.querySelector('.radio');
 const inputName = document.getElementById("name");
 const inputJob = document.getElementById("job");
 const inputPhoto = document.getElementById("photo");
@@ -16,7 +17,7 @@ const previewLinkedin = document.querySelector(".social__linkedin");
 const previewGithub = document.querySelector(".social__github");
 const previewPhone = document.querySelector(".social__phone");
 const shareBtn = document.querySelector(".js-click");
-const createCard = document.querySelector(".js-create-card");
+const createCard = document.querySelector(".js-create");
 
 const containDesign = document.querySelector(".form_designs-div");
 const containFill = document.querySelector(".form");
@@ -63,23 +64,49 @@ const handleForm = (event) => {
 
   if (inputId === "name") {
     previewName.innerHTML = inputName.value;
+    formData.name = inputName.value
   } else if (inputId === "job") {
     previewJob.innerHTML = inputJob.value;
+    formData.job = inputJob.value
   } else if (inputId === "email") {
     previewEmail.href = "mailto:" + inputEmail.value;
-    console.log(previewEmail.href);
+    formData.email = inputEmail.value;
   } else if (inputId === "phone") {
     previewPhone.href = "tel:" + inputPhone.value;
-    console.log(previewPhone.href);
+    formData.phone = inputPhone.value;
   } else if (inputId === "linkedin") {
     previewLinkedin.href = inputLinkedin.value;
+    formData.linkedin = inputLinkedin.value;
   } else if (inputId === "github") {
     const githubValue = inputGithub.value;
     const githubUser = githubValue.slice(1);
     previewGithub.href = "https://github.com/" + githubUser;
-  }
-    // previewGithub.href = inputGithub.value; //revisar el enlace a github con el usuario
-  
+    formData.github = githubUser;
+  } else if ((inputId === 1) || (inputId === 2) || (inputId === 3) || (inputId === 4)|| (inputId === 5)) {
+    formData.palette = parseInt(inputPalette.value);
+  } console.log(formData);
 };
+
+function handleCreate(event){
+  event.preventDefault();
+  console.log('create');
+  fetch('https://dev.adalab.es/api/card/', {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    headers: {'Content-type': 'application/json'},
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const cardLink = document.querySelector('.created__link');
+      const linkText = document.querySelector('.linkText');
+      cardLink.href = data.cardURL;
+      linkText.innerHTML = data.cardURL;
+      console.log(data);
+      openCreate();
+    });
+
+}
+
+createCard.addEventListener('click', handleCreate);
 
 form.addEventListener("input", handleForm);

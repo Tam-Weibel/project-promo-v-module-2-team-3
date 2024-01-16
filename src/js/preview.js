@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const btnResetFormOutside = document.querySelector(".js-btnReset");
+const btnResetFormOutside = document.querySelector('.js-btnReset');
 
 function handleResetFormOutside() {
   inputName.value = "";
@@ -27,7 +27,7 @@ function handleResetFormOutside() {
     "palete-5"
   );
   articlePalettes.classList.add("palete-1");
-  document.getElementById('1').checked = true;
+  document.getElementById("1").checked = true;
   sectionParents[0].classList.remove("collapsable--close");
   sectionParents[1].classList.add("collapsable--close");
   sectionParents[2].classList.add("collapsable--close");
