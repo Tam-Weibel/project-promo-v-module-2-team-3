@@ -17,7 +17,7 @@ function handleResetFormOutside() {
   previewGithub.href = "";
   profileImage.style.backgroundImage = "";
   profilePreview.style.backgroundImage = "";
-  shareBtn.classList.add("hidden");
+  createOpen.classList.add("hidden");
   createBtn.classList.remove("share__grey");
   articlePalettes.classList.remove(
     "palete-1",
