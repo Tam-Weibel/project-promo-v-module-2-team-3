@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const btnResetFormOutside = document.querySelector('.js-btnReset');
+const btnResetFormOutside = document.querySelector(".js-btnReset");
 
 function handleResetFormOutside() {
   inputName.value = "";

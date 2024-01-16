@@ -96,20 +96,20 @@ const handleForm = (event) => {
 function openCreate() {
   createCard.classList.add("share__grey");
   createOpen.classList.remove("hidden");
-};
+}
 
 function tweetUrl(url) {
-  const tweet = document.querySelector('.js-share');
+  const tweet = document.querySelector(".js-share");
   tweet.href = tweet.href + url;
   console.log(tweet.href);
-};
+}
 
-function renderUrl(url){
+function renderUrl(url) {
   const cardLink = document.querySelector(".created__link");
   const linkText = document.querySelector(".linkText");
   cardLink.href = url;
   linkText.innerHTML = url;
-};
+}
 
 function handleCreate(event) {
   event.preventDefault();
@@ -127,7 +127,7 @@ function handleCreate(event) {
       tweetUrl(data.cardURL);
       console.log(cardURL);
     });
-};
+}
 
 createCard.addEventListener("click", handleCreate);
 form.addEventListener("input", handleForm);

@@ -3,9 +3,6 @@
   flex-direction: row;
   border: none;
   border-bottom: 1px solid $white-three;
-  // margin-top: 10px;
-  // margin-left: 20px;
-  // margin-right: 20px;
 
   &-leyend {
     display: flex;
@@ -133,75 +130,75 @@
 
 .palete-1 {
   .preview__text--title {
-    color: $dark-green-blue ;
+    color: $dark-green-blue;
   }
 
   .preview__text {
-    border-left: solid 5px $dirty-blue ;
+    border-left: solid 5px $dirty-blue;
   }
 
   .social__icon {
     color: $dark-green-blue;
-    border-color: $hospital-green ;
+    border-color: $hospital-green;
   }
 }
 
 .palete-2 {
   .preview__text--title {
-    color: $dried-blood ;
+    color: $dried-blood;
   }
 
   .preview__text {
-    border-left: solid 5px $rusty-red ;
+    border-left: solid 5px $rusty-red;
   }
 
   .social__icon {
     color: $dried-blood;
-    border-color: $tomato ;
+    border-color: $tomato;
   }
 }
 
 .palete-3 {
   .preview__text--title {
-    color: $slate ;
+    color: $slate;
   }
 
   .preview__text {
-    border-left: solid 5px $faded-orange ;
+    border-left: solid 5px $faded-orange;
   }
 
   .social__icon {
     color: $slate;
-    border-color: $light-grey-blue ;
+    border-color: $light-grey-blue;
   }
 }
 
 .palete-4 {
   .preview__text--title {
-    color: $dark-pink ;
+    color: $dark-pink;
   }
 
   .preview__text {
-    border-left: solid 5px $purple ;
+    border-left: solid 5px $purple;
   }
 
   .social__icon {
     color: $dark-pink;
-    border-color: $light-mauve ;
+    border-color: $light-mauve;
   }
 }
 
 .palete-5 {
   .preview__text--title {
-    color: $dark-grey ;
+    color: $dark-grey;
   }
 
   .preview__text {
-    border-left: solid 5px $grey ;
+    border-left: solid 5px $grey;
   }
 
   .social__icon {
     color: $dark-grey;
-    border-color: $light-grey ;
+    border-color: $light-grey;
   }
 }
