@@ -1,33 +1,26 @@
 .action {
-    text-align: center;
-    margin: 30px;
-  }
-  
-  
-  .action__hiddenField {
-    /* Ocultamos el input de tipo "file" porque no podemos 
+  text-align: center;
+  margin: 30px;
+}
+
+.action__hiddenField {
+  /* Ocultamos el input de tipo "file" porque no podemos 
     darle los estilos que queremos */
-    display: none;
-  }
-  
-  .profile {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-  .photo {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 1px solid #ccc;
-  }
-  .profile__image {
-    width: 300px;
-    height: 300px;
-  }
-  
- /*  .miniphoto {
-    width: 50px;
-    height: 50px;
-    margin-left: 15px;
-  } */
+  display: none;
+}
+
+.profile {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+}
+.profile__image {
+  width: 300px;
+  height: 300px;
+}
