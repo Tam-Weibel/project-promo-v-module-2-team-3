@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const form = document.querySelector(".js-form");
 const inputPalette = document.querySelector(".radio");
@@ -58,6 +58,9 @@ const formData = {
   photo: "",
 };
 
+
+
+
 //funcion para rellenar la card con los datos del formulario
 const handleForm = (event) => {
   const inputId = event.target.id;
@@ -68,22 +71,42 @@ const handleForm = (event) => {
     previewJob.innerHTML = inputJob.value;
     formData.job = inputJob.value;
   } else if (inputId === "email") {
+    formData.email = inputEmail.value;
     const emailValue=inputEmail.value;
     if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
-    previewEmail.href = "mailto:" + inputEmail.value;
-    formData.email = inputEmail.value;
+      previewEmail.href = "mailto:" + inputEmail.value;
+      console.log(previewEmail.href);
+    } else {
+      console.error("Dirección de correo electrónico no válida");
+    } 
   } else if (inputId === "phone") {
-    previewPhone.href = "tel:" + inputPhone.value;
     formData.phone = inputPhone.value;
+    const phoneValue = inputPhone.value;
+    console.log(phoneValue);
+    if (/^\d{9}$/.test(phoneValue)) {
+      previewPhone.href = "tel:" + phoneValue;
+      console.log(previewPhone.href);
+    } else {
+      console.error("Número de teléfono no válido");
+    }
   } else if (inputId === "linkedin") {
-    previewLinkedin.href = 'https://www.linkedin.com/in/' + inputLinkedin.value;
     formData.linkedin = inputLinkedin.value;
+    const linkedinValue = inputLinkedin.value;
+    if (/^linkedin\.com\/in\/[a-zA-Z0-9-]+(?:-[a-zA-Z0-9]+)*\/?$/.test(linkedinValue)) {
+      previewLinkedin.href = "https://" + linkedinValue;
+    } else {
+      console.error("Enlace de LinkedIn no válido");
+    }
   } else if (inputId === "github") {
+    formData.github = inputGithub.value;;
     const githubValue = inputGithub.value;
-    const githubUser = githubValue.slice(1);
-    previewGithub.href = "https://github.com/" + githubUser;
-    formData.github = githubUser;
-  } else if (
+       if (/^@[a-zA-Z\d](?:[a-zA-Z\d]|-(?=[a-zA-Z\d])){0,38}$/.test(githubValue)) {
+      previewGithub.href = "https://github.com/" + githubValue.substring(1);
+    } else {
+      console.error("Nombre de usuario de GitHub no válido");
+    }
+  }
+    else if (
     inputId === 'one' ||
     inputId === 'two' ||
     inputId === 'three' ||
@@ -92,7 +115,6 @@ const handleForm = (event) => {
   ) {
     formData.palette = parseInt(event.target.value);
   }
-   }
 };
 
 function openCreate() {
@@ -127,4 +149,4 @@ function handleCreate(event) {
 }
 
 createCard.addEventListener("click", handleCreate);
-form.addEventListener("input", handleForm);
+form.addEventListener("blur", handleForm,true);
