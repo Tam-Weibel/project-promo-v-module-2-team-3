@@ -30,7 +30,7 @@ function handleResetFormOutside() {
     "palete-5"
   );
   articlePalettes.classList.add("palete-1");
-  document.getElementById("1").checked = true;
+  document.getElementById("one").checked = true;
  
   tweet.href = "https://twitter.com/intent/tweet?text=Mira mi nueva tarjeta&url=";
 }
