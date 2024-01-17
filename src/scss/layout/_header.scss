@@ -1,24 +1,24 @@
 .header {
-    background-color: $white-four;
-    display: flex;
-    flex-direction: flex-end;
-    justify-content: center;
-    align-items: end;
-    height: 40vh;
+  background-color: $white-four;
+  display: flex;
+  flex-direction: flex-end;
+  justify-content: center;
+  align-items: end;
+  height: 40vh;
 
-    &__logo {
-        width: 250px;
-        height: 63px;
-        margin: 0;
+  &__logo {
+    width: 250px;
+    height: 63px;
+    margin: 0;
 
-        @media (min-width: 768px) {
-            width: 419px;
-            height: 105px;
-        }
-
-        &--img {
-            width: 100%;
-            height: auto;
-        }
+    @media (min-width: 768px) {
+      width: 419px;
+      height: 105px;
     }
+
+    &--img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

@@ -13,7 +13,7 @@
     width: 60%;
   }
 }
-.resetBox{
+.resetBox {
   padding-bottom: 20px;
   width: 240px;
 }
@@ -28,6 +28,11 @@
   font-family: $text;
   text-transform: uppercase;
   align-content: center;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
 }
 
 .preview {
@@ -61,7 +66,7 @@
 }
 .social {
   padding: 12px 20px;
-  display:flex;
+  display: flex;
   flex-direction: row;
   gap: 10px;
 

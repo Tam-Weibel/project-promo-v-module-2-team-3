@@ -9,16 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="./assets/main-f9483cc5.css">
+    <link rel="stylesheet" href="./assets/main-8828dbcc.css">
   </head>
 
   <body>
     <header class="headerLast">
-    <figure class="headerLast__logo">
-        <a href="./#awesome"><img class="headerLast__logo--img" src="./images/logo-awesome.svg" alt="logo awesome profiles"></a>
-    </figure>
+  <figure class="headerLast__logo">
+    <a href="./#awesome"
+      ><img
+        class="headerLast__logo--img"
+        src="./images/logo-awesome.svg"
+        alt="logo awesome profiles"
+    /></a>
+  </figure>
 </header>
-   <main class="mainLast">
+
+    <main class="mainLast">
     <section class="card btnClean">
   <div class="resetBox">
     <button type="button" class="reset js-btnReset">
@@ -26,7 +32,7 @@
       Reset
     </button>
   </div>
-  <article class="preview">
+  <article class="preview palete-1">
     <div class="preview__text">
       <h2 class="preview__text--title">Nombre Apellido</h2>
       <h3 class="preview__text--p">Front-end developer</h3>
@@ -34,28 +40,46 @@
 
     <div class="previewPhoto js-photo"></div>
     <div class="social">
-      <a href="#" class="social__icon social__phone"><i class="fa-solid fa-mobile-screen"></i></a>
-      <a href="#" class="social__icon social__email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="#" class="social__icon social__linkedin"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#" class="social__icon social__github"><i class="fa-brands fa-github-alt"></i></a>
+      <a href="#" class="social__icon social__phone"
+        ><i class="fa-solid fa-mobile-screen"></i
+      ></a>
+      <a href="#" class="social__icon social__email"
+        ><i class="fa-solid fa-envelope"></i
+      ></a>
+      <a href="#" class="social__icon social__linkedin" target="_blank"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+      <a href="#" class="social__icon social__github" target="_blank"
+        ><i class="fa-brands fa-github-alt"></i
+      ></a>
     </div>
   </article>
 </section>
 
     <form id="Form" class="form_page js-form">
-    <fieldset class="form_designs">
+  <fieldset class="form_designs form_box collapsable--close">
   <legend class="form_designs-leyend js-section">
     <div class="form_designs-leyend-div">
-      <i class="fa-regular fa-object-ungroup main__section--logo"></i>
+      <i
+        class="fa-regular fa-object-ungroup main__section--logo"
+        style="color: #e17634"
+      ></i>
       Diseña
     </div>
-    <i class="fa-solid fa-angle-down icon"></i>
+    <i class="fa-solid fa-angle-down icon collapsable__icon--right"></i>
   </legend>
-  <div class="form_designs-div">
+  <div class="form_designs-div collapsable__content">
     <h3>colores</h3>
     <div class="form_designs_colors">
       <div class="form_designs_colors-div">
-        <input type="radio" name="color" id="" value="1" class="radio" checked />
+        <input
+          type="radio"
+          name="color"
+          id="one"
+          value="1"
+          class="radio"
+          checked
+        />
         <label for="green">
           <div class="form_designs_colors-div-label">
             <span
@@ -69,7 +93,7 @@
         </label>
       </div>
       <div class="form_designs_colors-div">
-        <input type="radio" name="color" id="" value="2" class="radio" />
+        <input type="radio" name="color" id="two" value="2" class="radio" />
         <label for="red">
           <div class="form_designs_colors-div-label">
             <span class="form_designs_colors-div-label-span dried-blood"></span>
@@ -79,7 +103,7 @@
         </label>
       </div>
       <div class="form_designs_colors-div">
-        <input type="radio" name="color" id="" value="3" class="radio"  />
+        <input type="radio" name="color" id="three" value="3" class="radio" />
         <label for="yellow">
           <div class="form_designs_colors-div-label">
             <span class="form_designs_colors-div-label-span slate"></span>
@@ -93,7 +117,7 @@
         </label>
       </div>
       <div class="form_designs_colors-div">
-        <input type="radio" name="color" id="" value="4" class="radio" />
+        <input type="radio" name="color" id="four" value="4" class="radio" />
         <label for="pink">
           <div class="form_designs_colors-div-label">
             <span class="form_designs_colors-div-label-span dark-pink"></span>
@@ -103,7 +127,7 @@
         </label>
       </div>
       <div class="form_designs_colors-div">
-        <input type="radio" name="color" id="" value="5" class="radio" />
+        <input type="radio" name="color" id="five" value="5" class="radio" />
         <label for="grey">
           <div class="form_designs_colors-div-label">
             <span class="form_designs_colors-div-label-span dark-grey"></span>
@@ -116,105 +140,133 @@
   </div>
 </fieldset>
 
-
-
-
-
-
-
-
-
-    <fieldset class="fieldset">
-  <legend class="fieldset__title js-section"> 
+  <fieldset class="fieldset form_box collapsable--close">
+  <legend class="fieldset__title js-section">
     <div class="fieldset__title--text">
-      <i class="fa-regular fa-keyboard" style="color: #e17634;"></i> 
-      Rellena 
+      <i class="fa-regular fa-keyboard" style="color: #e17634"></i>
+      Rellena
     </div>
-    <i class="fa-solid fa-angle-down icon"></i>
+    <i class="fa-solid fa-angle-down icon collapsable__icon--right"></i>
   </legend>
 
-  <div class="form">
-
+  <div class="form collapsable__content">
     <div class="form__title js-name">
       <label for="name">Nombre completo</label>
-      <input type="text" id="name" name="name" placeholder="Ej: Sally Jill" class="form__input" />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Ej: Sally Jill"
+        class="form__input"
+        maxlength="24"
+      />
     </div>
 
     <div class="form__title js-job">
       <label for="job">Puesto</label>
-      <input type="text" id="job" name="job" placeholder="Ej: Front-end unicorn" class="form__input" />
+      <input
+        type="text"
+        id="job"
+        name="job"
+        placeholder="Ej: Front-end unicorn"
+        class="form__input"
+        maxlength="30"
+      />
     </div>
-
 
     <li class="form__photo">
       <label class="form__photo--label" for="photo">Imagen de perfil</label>
       <label for="photo" class="form__photo--button">Añadir imagen</label>
-      <input class="form__photo--input" type="file" name="photo" id="photo">
+      <input class="form__photo--input" type="file" name="photo" id="photo" />
       <span class="miniphoto"> </span>
     </li>
 
     <div class="form__title">
       <label for="name">Email</label>
-      <input type="email" id="email" name="email" placeholder="Ej: sally-hill@gmail.com" class="form__input" />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Ej: sally-hill@gmail.com"
+        class="form__input"
+      />
     </div>
 
     <div class="form__title">
       <label for="name">Teléfono</label>
-      <input type="number" id="phone" name="phone" placeholder="Ej: 555-55-55-55" class="form__input" />
+      <input
+        type="number"
+        id="phone"
+        name="phone"
+        placeholder="Ej: 555-55-55-55"
+        class="form__input"
+      />
     </div>
 
     <div class="form__title">
       <label for="name">Linkedin</label>
-      <input type="text" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" class="form__input" />
+      <input
+        type="text"
+        id="linkedin"
+        name="linkedin"
+        placeholder="Ej: linkedin.com/in/sally.hill"
+        class="form__input"
+      />
     </div>
 
     <div class="form__title">
       <label for="name">Github</label>
-      <input type="text" id="github" name="github" placeholder="Ej: @sally-hill" class="form__input" />
+      <input
+        type="text"
+        id="github"
+        name="github"
+        placeholder="Ej: @sally-hill"
+        class="form__input"
+      />
     </div>
-
   </div>
 </fieldset>
 
-
-
-
-    <fieldset class="share">
-  <legend class="share__legend js-section"> 
-      <div class="share__legend--text">
-        <i class="fa-solid fa-share-nodes" style="color: #e17634;"></i>
-        Comparte
-      </div> 
-      <i class="fa-solid fa-angle-down icon"></i>
+  <fieldset class="share form_box collapsable--close">
+  <legend class="share__legend js-section">
+    <div class="share__legend--text">
+      <i class="fa-solid fa-share-nodes" style="color: #e17634"></i>
+      Comparte
+    </div>
+    <i class="fa-solid fa-angle-down icon collapsable__icon--right"></i>
   </legend>
+  <div class="collapsable__content">
+    <button class="share__create js-create">
+      <i class="fa-solid fa-address-card"></i>
+      <p>Crear tarjeta</p>
+    </button>
 
-  <button class="share__create js-create">
-    <i class="fa-solid fa-address-card"></i>  
-    <p>Crear tarjeta</p>
-  </button>
-    
-  <div class="created hidden js-click">
-    <p class="created__text">La tarjeta ha sido creada:</p>
-    <a href="#" class="created__link">https://awesome-profile-card.com?id=A456DF0001</a>
-    <div class="created__btn">
-      <i class="fa-brands fa-x-twitter"></i> 
-      <p>Compartir en X</p>
-    </div> 
+    <div class="created hidden js-open">
+      <p class="created__text">La tarjeta ha sido creada:</p>
+      <a href="#" class="created__link" target="_blank"
+        ><span class="linkText"></span
+      ></a>
+      <a
+        class="created__btn js-share"
+        href="https://twitter.com/intent/tweet?text=Mira mi nueva tarjeta&url="
+        data-size="large"
+        target="_blank"
+        >Compartir en <i class="fa-brands fa-x-twitter"></i
+      ></a>
+    </div>
   </div>
-  
-
 </fieldset>
 
 </form>
-   </main>
+
+    </main>
     <footer class="footer">
-    <ul class="footer__list">
-        <li>Awesome profile-cards @2024</li>
-        <li>
-            <a href="https://adalab.es/" target="_blank"><img class="footer__list--fig" src="./images/logo-adalab.png" alt="logo adalab"></a>
-        </li>
-    </ul>
+  <p class="footer__text">Awesome profile-cards @2024</p>
+  <a href="https://adalab.es/" target="_blank"
+    ><img class="footer__fig" src="./images/logo-adalab.png" alt="logo adalab"
+  /></a>
 </footer>
+
     <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
