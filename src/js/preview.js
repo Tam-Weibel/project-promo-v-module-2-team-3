@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const btnResetFormOutside = document.querySelector('.js-btnReset');
+const btnResetFormOutside = document.querySelector(".js-btnReset");
 
 function handleResetFormOutside() {
   inputName.value = "";
@@ -17,7 +17,7 @@ function handleResetFormOutside() {
   previewGithub.href = "";
   profileImage.style.backgroundImage = "";
   profilePreview.style.backgroundImage = "";
-  shareBtn.classList.add("hidden");
+  createOpen.classList.add("hidden");
   createBtn.classList.remove("share__grey");
   articlePalettes.classList.remove(
     "palete-1",
@@ -31,6 +31,7 @@ function handleResetFormOutside() {
   sectionParents[0].classList.remove("collapsable--close");
   sectionParents[1].classList.add("collapsable--close");
   sectionParents[2].classList.add("collapsable--close");
+  tweet.href = "https://twitter.com/intent/tweet?text=Mira mi nueva tarjeta&url=";
 }
 
 btnResetFormOutside.addEventListener("click", handleResetFormOutside);

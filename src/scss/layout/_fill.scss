@@ -2,9 +2,6 @@
   border: none;
   border-bottom: 1px solid $white-three;
   font-family: $text;
-  // margin-top: 10px;
-  // margin-left: 20px;
-  // margin-right: 20px;
 
   &__title {
     width: 100%;
@@ -45,6 +42,7 @@
   &__input {
     border: 1px solid $hospital-green;
     height: 30px;
+    padding: 7px 9px;
 
     &::placeholder {
       color: $pinkish-grey;
