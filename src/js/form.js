@@ -16,7 +16,7 @@ const previewEmail = document.querySelector(".social__email");
 const previewLinkedin = document.querySelector(".social__linkedin");
 const previewGithub = document.querySelector(".social__github");
 const previewPhone = document.querySelector(".social__phone");
-const createOpen = document.querySelector(".js-click");
+const createOpen = document.querySelector(".js-open");
 const createCard = document.querySelector(".js-create");
 
 const containDesign = document.querySelector(".form_designs-div");
@@ -25,6 +25,8 @@ const arrow = document.querySelectorAll(".icon");
 
 const section = document.querySelectorAll(".js-section");
 const sectionParents = document.querySelectorAll(".form_box");
+
+const tweet = document.querySelector(".js-share");
 
 const handleCollapsable = (event) => {
   const clickedHeader = event.currentTarget;
@@ -91,10 +93,10 @@ const handleForm = (event) => {
 };
 
 function openCreate() {
-  createCard.classList.add("share__grey");
   createOpen.classList.remove("hidden");
+  createCard.classList.add("share__grey");
 }
-const tweet = document.querySelector(".js-share");
+
 function tweetUrl(url) {
   tweet.href = tweet.href + url;
 }
