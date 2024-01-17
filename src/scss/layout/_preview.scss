@@ -28,6 +28,11 @@
   font-family: $text;
   text-transform: uppercase;
   align-content: center;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
 }
 
 .preview {
