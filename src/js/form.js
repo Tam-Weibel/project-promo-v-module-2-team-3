@@ -74,7 +74,7 @@ const handleForm = (event) => {
     previewPhone.href = "tel:" + inputPhone.value;
     formData.phone = inputPhone.value;
   } else if (inputId === "linkedin") {
-    previewLinkedin.href = inputLinkedin.value;
+    previewLinkedin.href = 'https://www.linkedin.com/in/' + inputLinkedin.value;
     formData.linkedin = inputLinkedin.value;
   } else if (inputId === "github") {
     const githubValue = inputGithub.value;
