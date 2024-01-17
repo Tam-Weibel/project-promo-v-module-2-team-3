@@ -66,20 +66,42 @@ const handleForm = (event) => {
   } else if (inputId === "job") {
     previewJob.innerHTML = inputJob.value;
   } else if (inputId === "email") {
+    const emailValue=inputEmail.value;
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
     previewEmail.href = "mailto:" + inputEmail.value;
     console.log(previewEmail.href);
+  } else {
+    console.error("Dirección de correo electrónico no válida");
+  } 
   } else if (inputId === "phone") {
-    previewPhone.href = "tel:" + inputPhone.value;
-    console.log(previewPhone.href);
+    const phoneValue = inputPhone.value;
+    console.log(phoneValue);
+    if (/^\d{9}$/.test(phoneValue)) {
+      previewPhone.href = "tel:" + phoneValue;
+      console.log(previewPhone.href);
+    } else {
+      console.error("Número de teléfono no válido");
+    }
   } else if (inputId === "linkedin") {
-    previewLinkedin.href = inputLinkedin.value;
+    const linkedinValue = inputLinkedin.value;
+    if (/^linkedin\.com\/in\/[a-zA-Z0-9-]+\/?$/.test(linkedinValue)) {
+      previewLinkedin.href = "https://" + linkedinValue;
+    } else {
+      console.error("Enlace de LinkedIn no válido");
+    }
   } else if (inputId === "github") {
     const githubValue = inputGithub.value;
-    const githubUser = githubValue.slice(1);
-    previewGithub.href = "https://github.com/" + githubUser;
+    if (/^@[a-zA-Z\d](?:[a-zA-Z\d]|-(?=[a-zA-Z\d])){0,38}$/.test(githubValue)) {
+      previewGithub.href = "https://github.com/" + githubValue.substring(1);
+    } else {
+      console.error("Nombre de usuario de GitHub no válido");
+    }
   }
+
     // previewGithub.href = inputGithub.value; //revisar el enlace a github con el usuario
   
 };
+
+
 
 form.addEventListener("input", handleForm);
