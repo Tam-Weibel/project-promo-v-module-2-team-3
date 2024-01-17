@@ -31,6 +31,7 @@ function handleResetFormOutside() {
   sectionParents[0].classList.remove("collapsable--close");
   sectionParents[1].classList.add("collapsable--close");
   sectionParents[2].classList.add("collapsable--close");
+  tweet.href = "https://twitter.com/intent/tweet?text=Mira mi nueva tarjeta&url=";
 }
 
 btnResetFormOutside.addEventListener("click", handleResetFormOutside);

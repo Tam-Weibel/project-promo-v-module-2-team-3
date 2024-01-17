@@ -59,8 +59,6 @@ const formData = {
 //funcion para rellenar la card con los datos del formulario
 const handleForm = (event) => {
   const inputId = event.target.id;
-  formData[inputId] = event.target.value;
-
   if (inputId === "name") {
     previewName.innerHTML = inputName.value;
     formData.name = inputName.value;
@@ -82,26 +80,23 @@ const handleForm = (event) => {
     previewGithub.href = "https://github.com/" + githubUser;
     formData.github = githubUser;
   } else if (
-    inputId === 1 ||
-    inputId === 2 ||
-    inputId === 3 ||
-    inputId === 4 ||
-    inputId === 5
+    inputId === 'one' ||
+    inputId === 'two' ||
+    inputId === 'three' ||
+    inputId === 'four' ||
+    inputId === 'five'
   ) {
-    formData.palette = parseInt(inputPalette.value);
+    formData.palette = parseInt(event.target.value);
   }
-  console.log(formData);
 };
 
 function openCreate() {
   createCard.classList.add("share__grey");
   createOpen.classList.remove("hidden");
 }
-
+const tweet = document.querySelector(".js-share");
 function tweetUrl(url) {
-  const tweet = document.querySelector(".js-share");
   tweet.href = tweet.href + url;
-  console.log(tweet.href);
 }
 
 function renderUrl(url) {
@@ -113,7 +108,6 @@ function renderUrl(url) {
 
 function handleCreate(event) {
   event.preventDefault();
-  console.log("create");
   fetch("https://dev.adalab.es/api/card/", {
     method: "POST",
     body: JSON.stringify(formData),
@@ -121,11 +115,9 @@ function handleCreate(event) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       openCreate();
       renderUrl(data.cardURL);
       tweetUrl(data.cardURL);
-      console.log(cardURL);
     });
 }
 
