@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const form = document.querySelector(".js-form");
 const inputPalette = document.querySelector(".radio");
@@ -92,6 +92,7 @@ const handleForm = (event) => {
   ) {
     formData.palette = parseInt(event.target.value);
   }
+   }
 };
 
 function openCreate() {
