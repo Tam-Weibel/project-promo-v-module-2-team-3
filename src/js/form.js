@@ -32,6 +32,7 @@ const sectionParents = document.querySelectorAll(".form_box");
 
 const tweet = document.querySelector(".js-share");
 
+
 const handleCollapsable = (event) => {
   const clickedHeader = event.currentTarget;
   const clickedParent = clickedHeader.parentNode;
@@ -136,6 +137,7 @@ function renderUrl(url) {
 
 function handleCreate(event) {
   event.preventDefault();
+  localStorage.setItem('localForm', JSON.stringify(formData));
   fetch("https://dev.adalab.es/api/card/", {
     method: "POST",
     body: JSON.stringify(formData),
@@ -147,7 +149,24 @@ function handleCreate(event) {
       renderUrl(data.cardURL);
       tweetUrl(data.cardURL);
     });
+
 }
 
 createCard.addEventListener("click", handleCreate);
 form.addEventListener("input", handleForm);
+
+
+const renderLocal = () => {
+  const storedForm = JSON.parse(localStorage.getItem('localForm'));
+  inputPalette.value = storedForm.palette;
+  inputName.value = storedForm.name;
+  inputJob.value =  storedForm.job;
+  inputPhoto.src = storedForm.photo;
+  inputEmail.value = storedForm.email;
+  inputPhone.value = storedForm.phone;
+  inputLinkedin.value = storedForm.linkedin;
+  inputGithub.value = storedForm.github;
+  console.log( inputPhoto.src, storedForm.photo);
+}
+
+renderLocal();

@@ -37,6 +37,7 @@ function handleResetFormOutside() {
   errorPhone.classList.add('hidden');
   errorLinkedin.classList.add('hidden');
   errorGithub.classList.add('hidden');
+  localStorage.clear();
 }
 
 btnResetFormOutside.addEventListener("click", handleResetFormOutside);
