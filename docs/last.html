@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="./assets/main-aa2e2fb6.css">
+    <link rel="stylesheet" href="./assets/main-8828dbcc.css">
   </head>
 
   <body>
@@ -24,7 +24,7 @@
   </figure>
 </header>
 
-   <main class="mainLast">
+    <main class="mainLast">
     <section class="card btnClean">
   <div class="resetBox">
     <button type="button" class="reset js-btnReset">
@@ -75,7 +75,7 @@
         <input
           type="radio"
           name="color"
-          id="1"
+          id="one"
           value="1"
           class="radio"
           checked
@@ -93,7 +93,7 @@
         </label>
       </div>
       <div class="form_designs_colors-div">
-        <input type="radio" name="color" id="" value="2" class="radio" />
+        <input type="radio" name="color" id="two" value="2" class="radio" />
         <label for="red">
           <div class="form_designs_colors-div-label">
             <span class="form_designs_colors-div-label-span dried-blood"></span>
@@ -103,7 +103,7 @@
         </label>
       </div>
       <div class="form_designs_colors-div">
-        <input type="radio" name="color" id="" value="3" class="radio" />
+        <input type="radio" name="color" id="three" value="3" class="radio" />
         <label for="yellow">
           <div class="form_designs_colors-div-label">
             <span class="form_designs_colors-div-label-span slate"></span>
@@ -117,7 +117,7 @@
         </label>
       </div>
       <div class="form_designs_colors-div">
-        <input type="radio" name="color" id="" value="4" class="radio" />
+        <input type="radio" name="color" id="four" value="4" class="radio" />
         <label for="pink">
           <div class="form_designs_colors-div-label">
             <span class="form_designs_colors-div-label-span dark-pink"></span>
@@ -127,7 +127,7 @@
         </label>
       </div>
       <div class="form_designs_colors-div">
-        <input type="radio" name="color" id="" value="5" class="radio" />
+        <input type="radio" name="color" id="five" value="5" class="radio" />
         <label for="grey">
           <div class="form_designs_colors-div-label">
             <span class="form_designs_colors-div-label-span dark-grey"></span>
@@ -235,20 +235,20 @@
     </div>
     <i class="fa-solid fa-angle-down icon collapsable__icon--right"></i>
   </legend>
-  <div class="js-share collapsable__content">
+  <div class="collapsable__content">
     <button class="share__create js-create">
       <i class="fa-solid fa-address-card"></i>
       <p>Crear tarjeta</p>
     </button>
 
-    <div class="created hidden js-click">
+    <div class="created hidden js-open">
       <p class="created__text">La tarjeta ha sido creada:</p>
-      <a href="#" class="created__link"
-        >https://awesome-profile-card.com?id=A456DF0001</a
-      >
+      <a href="#" class="created__link" target="_blank"
+        ><span class="linkText"></span
+      ></a>
       <a
-        class="created__btn"
-        href="https://twitter.com/intent/tweet?text="
+        class="created__btn js-share"
+        href="https://twitter.com/intent/tweet?text=Mira mi nueva tarjeta&url="
         data-size="large"
         target="_blank"
         >Compartir en <i class="fa-brands fa-x-twitter"></i
@@ -259,7 +259,7 @@
 
 </form>
 
-   </main>
+    </main>
     <footer class="footer">
   <p class="footer__text">Awesome profile-cards @2024</p>
   <a href="https://adalab.es/" target="_blank"

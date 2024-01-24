@@ -16,7 +16,7 @@ const previewEmail = document.querySelector(".social__email");
 const previewLinkedin = document.querySelector(".social__linkedin");
 const previewGithub = document.querySelector(".social__github");
 const previewPhone = document.querySelector(".social__phone");
-const createOpen = document.querySelector(".js-click");
+const createOpen = document.querySelector(".js-open");
 const createCard = document.querySelector(".js-create");
 const errorEmail = document.querySelector('.js-errorEmail');
 const errorPhone = document.querySelector('.js-errorPhone');
@@ -29,6 +29,8 @@ const arrow = document.querySelectorAll(".icon");
 
 const section = document.querySelectorAll(".js-section");
 const sectionParents = document.querySelectorAll(".form_box");
+
+const tweet = document.querySelector(".js-share");
 
 const handleCollapsable = (event) => {
   const clickedHeader = event.currentTarget;
@@ -88,6 +90,7 @@ const handleForm = (event) => {
       errorPhone.classList.remove('hidden');
     }
   } else if (inputId === "linkedin") {
+    previewLinkedin.href = 'https://www.linkedin.com/in/' + inputLinkedin.value;
     formData.linkedin = inputLinkedin.value;
     if (/^linkedin\.com\/in\/[a-zA-Z0-9-]+(?:-[a-zA-Z0-9]+)*\/?$/.test(inputLinkedin.value)) {
       previewLinkedin.href = "https://" + inputLinkedin.value;
@@ -116,10 +119,10 @@ const handleForm = (event) => {
 };
 
 function openCreate() {
-  createCard.classList.add("share__grey");
   createOpen.classList.remove("hidden");
+  createCard.classList.add("share__grey");
 }
-const tweet = document.querySelector(".js-share");
+
 function tweetUrl(url) {
   tweet.href = tweet.href + url;
 }
