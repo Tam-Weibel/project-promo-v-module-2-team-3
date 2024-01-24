@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Grupo 3</title>
+    <title>Las chicas del bucle</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="./assets/main-8828dbcc.css">
+    <link rel="stylesheet" href="./assets/main-1302021d.css">
   </head>
 
   <body>
@@ -159,6 +159,7 @@
         placeholder="Ej: Sally Jill"
         class="form__input"
         maxlength="24"
+        required
       />
     </div>
 
@@ -171,13 +172,14 @@
         placeholder="Ej: Front-end unicorn"
         class="form__input"
         maxlength="30"
+        required
       />
     </div>
 
     <li class="form__photo">
       <label class="form__photo--label" for="photo">Imagen de perfil</label>
       <label for="photo" class="form__photo--button">Añadir imagen</label>
-      <input class="form__photo--input" type="file" name="photo" id="photo" />
+      <input class="form__photo--input" type="file" name="photo" id="photo" required/>
       <span class="miniphoto"> </span>
     </li>
 
@@ -189,7 +191,9 @@
         name="email"
         placeholder="Ej: sally-hill@gmail.com"
         class="form__input"
+        required
       />
+      <p class="hidden js-errorEmail error">* Dirección de correo electrónico no válida</p>
     </div>
 
     <div class="form__title">
@@ -201,6 +205,7 @@
         placeholder="Ej: 555-55-55-55"
         class="form__input"
       />
+      <p class="hidden js-errorPhone error">* Número de teléfono no válido</p>
     </div>
 
     <div class="form__title">
@@ -211,7 +216,9 @@
         name="linkedin"
         placeholder="Ej: linkedin.com/in/sally.hill"
         class="form__input"
+        required
       />
+      <p class="hidden js-errorLinkedin error">* Enlace de Linkedin no válido</p>
     </div>
 
     <div class="form__title">
@@ -222,7 +229,9 @@
         name="github"
         placeholder="Ej: @sally-hill"
         class="form__input"
+        required
       />
+      <p class="hidden js-errorGithub error">* Usuario de Github no válido</p>
     </div>
   </div>
 </fieldset>
@@ -236,7 +245,7 @@
     <i class="fa-solid fa-angle-down icon collapsable__icon--right"></i>
   </legend>
   <div class="collapsable__content">
-    <button class="share__create js-create">
+    <button type="submit" class="share__create js-create">
       <i class="fa-solid fa-address-card"></i>
       <p>Crear tarjeta</p>
     </button>
@@ -261,7 +270,7 @@
 
     </main>
     <footer class="footer">
-  <p class="footer__text">Awesome profile-cards @2024</p>
+  <p class="footer__text">Las chicas del bucle @2024</p>
   <a href="https://adalab.es/" target="_blank"
     ><img class="footer__fig" src="./images/logo-adalab.png" alt="logo adalab"
   /></a>
