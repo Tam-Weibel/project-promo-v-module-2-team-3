@@ -18,6 +18,10 @@ const previewGithub = document.querySelector(".social__github");
 const previewPhone = document.querySelector(".social__phone");
 const createOpen = document.querySelector(".js-click");
 const createCard = document.querySelector(".js-create");
+const errorEmail = document.querySelector('.js-errorEmail');
+const errorPhone = document.querySelector('.js-errorPhone');
+const errorLinkedin = document.querySelector('.js-errorLinkedin');
+const errorGithub = document.querySelector('.js-errorGithub');
 
 const containDesign = document.querySelector(".form_designs-div");
 const containFill = document.querySelector(".form");
@@ -66,19 +70,40 @@ const handleForm = (event) => {
     previewJob.innerHTML = inputJob.value;
     formData.job = inputJob.value;
   } else if (inputId === "email") {
-    previewEmail.href = "mailto:" + inputEmail.value;
     formData.email = inputEmail.value;
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputEmail.value)) {
+      previewEmail.href = "mailto:" + inputEmail.value;
+      errorEmail.classList.add('hidden');
+      console.log(previewEmail.href);
+    } else {
+      errorEmail.classList.remove('hidden');
+    } 
   } else if (inputId === "phone") {
-    previewPhone.href = "tel:" + inputPhone.value;
     formData.phone = inputPhone.value;
+    if (/^\d{9}$/.test(inputPhone.value)) {
+      previewPhone.href = "tel:" + inputPhone.value;
+      errorPhone.classList.add('hidden');
+      console.log(previewPhone.href);
+    } else {
+      errorPhone.classList.remove('hidden');
+    }
   } else if (inputId === "linkedin") {
-    previewLinkedin.href = inputLinkedin.value;
     formData.linkedin = inputLinkedin.value;
+    if (/^linkedin\.com\/in\/[a-zA-Z0-9-]+(?:-[a-zA-Z0-9]+)*\/?$/.test(inputLinkedin.value)) {
+      previewLinkedin.href = "https://" + inputLinkedin.value;
+      errorLinkedin.classList.add('hidden');
+    } else {
+      errorLinkedin.classList.remove('hidden');
+    }
   } else if (inputId === "github") {
     const githubValue = inputGithub.value;
-    const githubUser = githubValue.slice(1);
-    previewGithub.href = "https://github.com/" + githubUser;
-    formData.github = githubUser;
+    if (/^@[a-zA-Z\d](?:[a-zA-Z\d]|-(?=[a-zA-Z\d])){0,38}$/.test(githubValue)) {
+      previewGithub.href = "https://github.com/" + githubValue.substring(1);
+      formData.github =  githubValue.substring(1);
+      errorGithub.classList.add('hidden');
+    } else {
+      errorGithub.classList.remove('hidden');
+    }
   } else if (
     inputId === 'one' ||
     inputId === 'two' ||
