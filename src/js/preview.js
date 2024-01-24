@@ -31,7 +31,6 @@ function handleResetFormOutside() {
   );
   articlePalettes.classList.add("palete-1");
   document.getElementById("one").checked = true;
- 
   tweet.href = "https://twitter.com/intent/tweet?text=Mira mi nueva tarjeta&url=";
   errorEmail.classList.add('hidden');
   errorPhone.classList.add('hidden');

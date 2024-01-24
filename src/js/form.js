@@ -18,10 +18,10 @@ const previewGithub = document.querySelector(".social__github");
 const previewPhone = document.querySelector(".social__phone");
 const createOpen = document.querySelector(".js-open");
 const createCard = document.querySelector(".js-create");
-const errorEmail = document.querySelector('.js-errorEmail');
-const errorPhone = document.querySelector('.js-errorPhone');
-const errorLinkedin = document.querySelector('.js-errorLinkedin');
-const errorGithub = document.querySelector('.js-errorGithub');
+const errorEmail = document.querySelector(".js-errorEmail");
+const errorPhone = document.querySelector(".js-errorPhone");
+const errorLinkedin = document.querySelector(".js-errorLinkedin");
+const errorGithub = document.querySelector(".js-errorGithub");
 
 const containDesign = document.querySelector(".form_designs-div");
 const containFill = document.querySelector(".form");
@@ -31,7 +31,6 @@ const section = document.querySelectorAll(".js-section");
 const sectionParents = document.querySelectorAll(".form_box");
 
 const tweet = document.querySelector(".js-share");
-
 
 const handleCollapsable = (event) => {
   const clickedHeader = event.currentTarget;
@@ -76,48 +75,56 @@ const handleForm = (event) => {
     formData.email = inputEmail.value;
     if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputEmail.value)) {
       previewEmail.href = "mailto:" + inputEmail.value;
-      errorEmail.classList.add('hidden');
-      console.log(previewEmail.href);
+      errorEmail.classList.add("hidden");
     } else {
-      errorEmail.classList.remove('hidden');
-    } 
+      errorEmail.classList.remove("hidden");
+    }
   } else if (inputId === "phone") {
     formData.phone = inputPhone.value;
     if (/^\d{9}$/.test(inputPhone.value)) {
       previewPhone.href = "tel:" + inputPhone.value;
-      errorPhone.classList.add('hidden');
-      console.log(previewPhone.href);
+      errorPhone.classList.add("hidden");
     } else {
-      errorPhone.classList.remove('hidden');
+      errorPhone.classList.remove("hidden");
     }
   } else if (inputId === "linkedin") {
-    previewLinkedin.href = 'https://www.linkedin.com/in/' + inputLinkedin.value;
-    formData.linkedin = inputLinkedin.value;
-    if (/^linkedin\.com\/in\/[a-zA-Z0-9-]+(?:-[a-zA-Z0-9]+)*\/?$/.test(inputLinkedin.value)) {
+    const username = inputLinkedin.value;
+    // const username = extractLinkedinUsername(fullLinkedinUrl);
+    formData.linkedin = username;
+    if (
+      /^linkedin\.com\/in\/[a-zA-Z0-9-]+(?:-[a-zA-Z0-9]+)*\/?$/.test(
+        inputLinkedin.value
+      )
+    ) {
       previewLinkedin.href = "https://" + inputLinkedin.value;
-      errorLinkedin.classList.add('hidden');
+      errorLinkedin.classList.add("hidden");
     } else {
-      errorLinkedin.classList.remove('hidden');
+      errorLinkedin.classList.remove("hidden");
     }
   } else if (inputId === "github") {
     const githubValue = inputGithub.value;
     if (/^@[a-zA-Z\d](?:[a-zA-Z\d]|-(?=[a-zA-Z\d])){0,38}$/.test(githubValue)) {
       previewGithub.href = "https://github.com/" + githubValue.substring(1);
-      formData.github =  githubValue.substring(1);
-      errorGithub.classList.add('hidden');
+      formData.github = githubValue.substring(1);
+      errorGithub.classList.add("hidden");
     } else {
-      errorGithub.classList.remove('hidden');
+      errorGithub.classList.remove("hidden");
     }
   } else if (
-    inputId === 'one' ||
-    inputId === 'two' ||
-    inputId === 'three' ||
-    inputId === 'four' ||
-    inputId === 'five'
+    inputId === "one" ||
+    inputId === "two" ||
+    inputId === "three" ||
+    inputId === "four" ||
+    inputId === "five"
   ) {
     formData.palette = parseInt(event.target.value);
   }
 };
+
+// function extractLinkedinUsername(linkedinUrl) {
+//   const match = linkedinUrl.match(/\/in\/([^\/]+)\/?/);
+//   return match ? match[1] : '';
+// }
 
 function openCreate() {
   createOpen.classList.remove("hidden");
@@ -137,7 +144,7 @@ function renderUrl(url) {
 
 function handleCreate(event) {
   event.preventDefault();
-  localStorage.setItem('localForm', JSON.stringify(formData));
+  localStorage.setItem("localForm", JSON.stringify(formData));
   fetch("https://dev.adalab.es/api/card/", {
     method: "POST",
     body: JSON.stringify(formData),
@@ -145,6 +152,7 @@ function handleCreate(event) {
   })
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       openCreate();
       renderUrl(data.cardURL);
       tweetUrl(data.cardURL);
@@ -154,23 +162,22 @@ function handleCreate(event) {
 createCard.addEventListener("click", handleCreate);
 form.addEventListener("input", handleForm);
 
-
 const renderLocal = () => {
-  const storedForm = JSON.parse(localStorage.getItem('localForm'));
+  const storedForm = JSON.parse(localStorage.getItem("localForm"));
   if (storedForm) {
-    inputPalette.value = storedForm.palette;
     inputName.value = storedForm.name;
-    inputJob.value =  storedForm.job;
-    // profileImage.style.backgroundImage = url(storedForm.photo);
-    // profilePreview.style.backgroundImage = url(storedForm.photo);
+    inputJob.value = storedForm.job;
     inputEmail.value = storedForm.email;
     inputPhone.value = storedForm.phone;
     inputLinkedin.value = storedForm.linkedin;
     inputGithub.value = storedForm.github;
+    const radioOptions = document.querySelectorAll(".radio");
+    for (const radio of radioOptions) {
+      if (parseInt(radio.value) === storedForm.palette) {
+        radio.checked = true;
+      }
+    }
   }
-  // } else {
-  //   handleResetFormOutside();
-  // }
-}
+};
 
 renderLocal();
