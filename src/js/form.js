@@ -64,6 +64,7 @@ const formData = {
 
 //funcion para rellenar la card con los datos del formulario
 const handleForm = (event) => {
+  event.preventDefault();
   const inputId = event.target.id;
   if (inputId === "name") {
     previewName.innerHTML = inputName.value;
@@ -88,8 +89,8 @@ const handleForm = (event) => {
       errorPhone.classList.remove("hidden");
     }
   } else if (inputId === "linkedin") {
-    const username = inputLinkedin.value;
-    // const username = extractLinkedinUsername(fullLinkedinUrl);
+    const username = inputLinkedin.value.substring(16);
+    console.log(username)
     formData.linkedin = username;
     if (
       /^linkedin\.com\/in\/[a-zA-Z0-9-]+(?:-[a-zA-Z0-9]+)*\/?$/.test(
@@ -120,11 +121,6 @@ const handleForm = (event) => {
     formData.palette = parseInt(event.target.value);
   }
 };
-
-// function extractLinkedinUsername(linkedinUrl) {
-//   const match = linkedinUrl.match(/\/in\/([^\/]+)\/?/);
-//   return match ? match[1] : '';
-// }
 
 function openCreate() {
   createOpen.classList.remove("hidden");
@@ -159,8 +155,14 @@ function handleCreate(event) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  renderLocal();
+  form.addEventListener('input', handleForm);
+});
+
+
 createCard.addEventListener("click", handleCreate);
-form.addEventListener("input", handleForm);
+// form.addEventListener("input", handleForm);
 
 const renderLocal = () => {
   const storedForm = JSON.parse(localStorage.getItem("localForm"));
@@ -171,13 +173,39 @@ const renderLocal = () => {
     inputPhone.value = storedForm.phone;
     inputLinkedin.value = storedForm.linkedin;
     inputGithub.value = storedForm.github;
+    inputPhoto.src = storedForm.photo;
     const radioOptions = document.querySelectorAll(".radio");
     for (const radio of radioOptions) {
       if (parseInt(radio.value) === storedForm.palette) {
         radio.checked = true;
       }
     }
+    formData.name = inputName.value;
+    formData.job = inputJob.value;
+    formData.email = inputEmail.value;
+    formData.phone = inputPhone.value;
+    formData.linkedin = inputLinkedin.value;
+    formData.github = inputGithub.value;
+    formData.palette = parseInt(document.querySelector('.radio:checked').value);
+    formData.photo = inputPhoto.src;
+    previewName.innerHTML = inputName.value;
+    previewJob.innerHTML = inputJob.value;
+    previewEmail.href = inputEmail.value;
+    previewPhone.href = inputPhone.value;
+    previewLinkedin.href = inputLinkedin.value;
+    previewGithub.href = inputGithub.value;
+    profileImage.style.backgroundImage = `url(${storedForm.photo})`;
+    profilePreview.style.backgroundImage = `url(${storedForm.photo})`;
+    articlePalettes.classList.remove(
+      "palete-1",
+      "palete-2",
+      "palete-3",
+      "palete-4",
+      "palete-5"
+    );
+    articlePalettes.classList.add("palete-" + storedForm.palette);
   }
 };
 
-renderLocal();
+
+

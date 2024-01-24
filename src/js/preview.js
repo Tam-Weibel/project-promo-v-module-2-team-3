@@ -13,6 +13,7 @@ function handleResetFormOutside() {
   previewName.innerHTML = "Nombre Apellido";
   previewJob.innerHTML = "Front-end developer";
   previewEmail.href = "";
+  previewPhone.href = "";
   previewLinkedin.href = "";
   previewGithub.href = "";
   profileImage.style.backgroundImage = "";
