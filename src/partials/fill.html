@@ -17,6 +17,7 @@
         placeholder="Ej: Sally Jill"
         class="form__input"
         maxlength="24"
+        required
       />
     </div>
 
@@ -29,13 +30,14 @@
         placeholder="Ej: Front-end unicorn"
         class="form__input"
         maxlength="30"
+        required
       />
     </div>
 
     <li class="form__photo">
       <label class="form__photo--label" for="photo">Imagen de perfil</label>
       <label for="photo" class="form__photo--button">Añadir imagen</label>
-      <input class="form__photo--input" type="file" name="photo" id="photo" />
+      <input class="form__photo--input" type="file" name="photo" id="photo" required/>
       <span class="miniphoto"> </span>
     </li>
 
@@ -47,7 +49,9 @@
         name="email"
         placeholder="Ej: sally-hill@gmail.com"
         class="form__input"
+        required
       />
+      <p class="hidden js-errorEmail error">* Dirección de correo electrónico no válida</p>
     </div>
 
     <div class="form__title">
@@ -59,6 +63,7 @@
         placeholder="Ej: 555-55-55-55"
         class="form__input"
       />
+      <p class="hidden js-errorPhone error">* Número de teléfono no válido</p>
     </div>
 
     <div class="form__title">
@@ -69,7 +74,9 @@
         name="linkedin"
         placeholder="Ej: linkedin.com/in/sally.hill"
         class="form__input"
+        required
       />
+      <p class="hidden js-errorLinkedin error">* Enlace de Linkedin no válido</p>
     </div>
 
     <div class="form__title">
@@ -80,7 +87,9 @@
         name="github"
         placeholder="Ej: @sally-hill"
         class="form__input"
+        required
       />
+      <p class="hidden js-errorGithub error">* Usuario de Github no válido</p>
     </div>
   </div>
 </fieldset>

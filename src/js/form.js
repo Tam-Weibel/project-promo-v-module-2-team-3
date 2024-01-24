@@ -18,6 +18,10 @@ const previewGithub = document.querySelector(".social__github");
 const previewPhone = document.querySelector(".social__phone");
 const createOpen = document.querySelector(".js-open");
 const createCard = document.querySelector(".js-create");
+const errorEmail = document.querySelector(".js-errorEmail");
+const errorPhone = document.querySelector(".js-errorPhone");
+const errorLinkedin = document.querySelector(".js-errorLinkedin");
+const errorGithub = document.querySelector(".js-errorGithub");
 
 const containDesign = document.querySelector(".form_designs-div");
 const containFill = document.querySelector(".form");
@@ -60,6 +64,7 @@ const formData = {
 
 //funcion para rellenar la card con los datos del formulario
 const handleForm = (event) => {
+  event.preventDefault();
   const inputId = event.target.id;
   if (inputId === "name") {
     previewName.innerHTML = inputName.value;
@@ -68,25 +73,50 @@ const handleForm = (event) => {
     previewJob.innerHTML = inputJob.value;
     formData.job = inputJob.value;
   } else if (inputId === "email") {
-    previewEmail.href = "mailto:" + inputEmail.value;
     formData.email = inputEmail.value;
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputEmail.value)) {
+      previewEmail.href = "mailto:" + inputEmail.value;
+      errorEmail.classList.add("hidden");
+    } else {
+      errorEmail.classList.remove("hidden");
+    }
   } else if (inputId === "phone") {
-    previewPhone.href = "tel:" + inputPhone.value;
     formData.phone = inputPhone.value;
+    if (/^\d{9}$/.test(inputPhone.value)) {
+      previewPhone.href = "tel:" + inputPhone.value;
+      errorPhone.classList.add("hidden");
+    } else {
+      errorPhone.classList.remove("hidden");
+    }
   } else if (inputId === "linkedin") {
-    previewLinkedin.href = 'https://www.linkedin.com/in/' + inputLinkedin.value;
-    formData.linkedin = inputLinkedin.value;
+    const username = inputLinkedin.value.substring(16);
+    console.log(username)
+    formData.linkedin = username;
+    if (
+      /^linkedin\.com\/in\/[a-zA-Z0-9-]+(?:-[a-zA-Z0-9]+)*\/?$/.test(
+        inputLinkedin.value
+      )
+    ) {
+      previewLinkedin.href = "https://" + inputLinkedin.value;
+      errorLinkedin.classList.add("hidden");
+    } else {
+      errorLinkedin.classList.remove("hidden");
+    }
   } else if (inputId === "github") {
     const githubValue = inputGithub.value;
-    const githubUser = githubValue.slice(1);
-    previewGithub.href = "https://github.com/" + githubUser;
-    formData.github = githubUser;
+    if (/^@[a-zA-Z\d](?:[a-zA-Z\d]|-(?=[a-zA-Z\d])){0,38}$/.test(githubValue)) {
+      previewGithub.href = "https://github.com/" + githubValue.substring(1);
+      formData.github = githubValue.substring(1);
+      errorGithub.classList.add("hidden");
+    } else {
+      errorGithub.classList.remove("hidden");
+    }
   } else if (
-    inputId === 'one' ||
-    inputId === 'two' ||
-    inputId === 'three' ||
-    inputId === 'four' ||
-    inputId === 'five'
+    inputId === "one" ||
+    inputId === "two" ||
+    inputId === "three" ||
+    inputId === "four" ||
+    inputId === "five"
   ) {
     formData.palette = parseInt(event.target.value);
   }
@@ -110,6 +140,7 @@ function renderUrl(url) {
 
 function handleCreate(event) {
   event.preventDefault();
+  localStorage.setItem("localForm", JSON.stringify(formData));
   fetch("https://dev.adalab.es/api/card/", {
     method: "POST",
     body: JSON.stringify(formData),
@@ -117,11 +148,64 @@ function handleCreate(event) {
   })
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       openCreate();
       renderUrl(data.cardURL);
       tweetUrl(data.cardURL);
     });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  renderLocal();
+  form.addEventListener('input', handleForm);
+});
+
+
 createCard.addEventListener("click", handleCreate);
-form.addEventListener("input", handleForm);
+// form.addEventListener("input", handleForm);
+
+const renderLocal = () => {
+  const storedForm = JSON.parse(localStorage.getItem("localForm"));
+  if (storedForm) {
+    inputName.value = storedForm.name;
+    inputJob.value = storedForm.job;
+    inputEmail.value = storedForm.email;
+    inputPhone.value = storedForm.phone;
+    inputLinkedin.value = storedForm.linkedin;
+    inputGithub.value = storedForm.github;
+    inputPhoto.src = storedForm.photo;
+    const radioOptions = document.querySelectorAll(".radio");
+    for (const radio of radioOptions) {
+      if (parseInt(radio.value) === storedForm.palette) {
+        radio.checked = true;
+      }
+    }
+    formData.name = inputName.value;
+    formData.job = inputJob.value;
+    formData.email = inputEmail.value;
+    formData.phone = inputPhone.value;
+    formData.linkedin = inputLinkedin.value;
+    formData.github = inputGithub.value;
+    formData.palette = parseInt(document.querySelector('.radio:checked').value);
+    formData.photo = inputPhoto.src;
+    previewName.innerHTML = inputName.value;
+    previewJob.innerHTML = inputJob.value;
+    previewEmail.href = inputEmail.value;
+    previewPhone.href = inputPhone.value;
+    previewLinkedin.href = inputLinkedin.value;
+    previewGithub.href = inputGithub.value;
+    profileImage.style.backgroundImage = `url(${storedForm.photo})`;
+    profilePreview.style.backgroundImage = `url(${storedForm.photo})`;
+    articlePalettes.classList.remove(
+      "palete-1",
+      "palete-2",
+      "palete-3",
+      "palete-4",
+      "palete-5"
+    );
+    articlePalettes.classList.add("palete-" + storedForm.palette);
+  }
+};
+
+
+
