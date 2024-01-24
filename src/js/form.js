@@ -149,7 +149,6 @@ function handleCreate(event) {
       renderUrl(data.cardURL);
       tweetUrl(data.cardURL);
     });
-
 }
 
 createCard.addEventListener("click", handleCreate);
@@ -158,15 +157,20 @@ form.addEventListener("input", handleForm);
 
 const renderLocal = () => {
   const storedForm = JSON.parse(localStorage.getItem('localForm'));
-  inputPalette.value = storedForm.palette;
-  inputName.value = storedForm.name;
-  inputJob.value =  storedForm.job;
-  inputPhoto.src = storedForm.photo;
-  inputEmail.value = storedForm.email;
-  inputPhone.value = storedForm.phone;
-  inputLinkedin.value = storedForm.linkedin;
-  inputGithub.value = storedForm.github;
-  console.log( inputPhoto.src, storedForm.photo);
+  if (storedForm) {
+    inputPalette.value = storedForm.palette;
+    inputName.value = storedForm.name;
+    inputJob.value =  storedForm.job;
+    // profileImage.style.backgroundImage = url(storedForm.photo);
+    // profilePreview.style.backgroundImage = url(storedForm.photo);
+    inputEmail.value = storedForm.email;
+    inputPhone.value = storedForm.phone;
+    inputLinkedin.value = storedForm.linkedin;
+    inputGithub.value = storedForm.github;
+  }
+  // } else {
+  //   handleResetFormOutside();
+  // }
 }
 
 renderLocal();
